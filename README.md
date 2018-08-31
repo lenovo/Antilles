@@ -1,2 +1,3 @@
 # Antilles
-HPC Cluster Web Portal
+
+Open Source HPC Cluster Web Portal with administrator, operator and user views.
