@@ -1,0 +1,5 @@
+d /var/run/antilles/core/download 0755 antilles antilles 10m
+d /var/run/antilles/core/upload 0755 antilles antilles 20m
+d /var/run/antilles/core/scripts 0755 antilles antilles
+d /var/run/antilles/core/beats 0755 antilles antilles
+d /var/run/antilles/core/lock 0755 antilles antilles

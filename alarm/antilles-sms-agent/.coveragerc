@@ -1,0 +1,3 @@
+[run]
+source = antilles/agent/sms
+omit = antilles/agent/sms/main.py

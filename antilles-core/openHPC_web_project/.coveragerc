@@ -1,0 +1,23 @@
+[run]
+source = antilles
+omit =
+    antilles/__init__.py,
+    antilles/*/management/commands/*,
+    antilles/*/migrations/*,
+    antilles/*/check.py,
+    antilles/scheduler/*,
+    antilles/common/main.py
+
+[report]
+exclude_lines =
+	pass$
+	except .+:$
+	raise .+$
+	raise$
+	return .*$
+	return$
+	import .+$
+	from .* import .+$
+	try:$
+
+

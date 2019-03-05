@@ -1,0 +1,14 @@
+include requirements.txt test-requirements.txt dev-requirements.txt
+include .bumpversion.cfg .coveragerc tox.ini
+include antilles-tools.spec
+include COPYING.BSD COPYING.EPL
+
+graft src
+graft tests
+
+exclude src/*.c
+
+recursive-exclude * *.c
+recursive-exclude * *.so
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]

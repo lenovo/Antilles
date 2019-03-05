@@ -1,0 +1,7 @@
+[Unit]
+Description=Monitor power metric from confluent
+
+[Service]
+Type=oneshot
+User=antilles
+ExecStart=/usr/bin/antilles-confluent-mond power

@@ -1,0 +1,20 @@
+.elfinder-button-icon-choosefolder {
+	background-position: 0 -288px;
+	padding-left: 13px !important;
+  position: relative;
+  top: -1px;
+}
+
+.elfinder-contextmenu-item .elfinder-button-icon-choosefolder {
+	background-position: 0 -288px;
+}
+
+.elfinder-button-icon-choosefile {
+	background-position: 0 -288px;
+  position: relative;
+  top: -1px;
+}
+
+.elfinder-contextmenu-item .elfinder-button-icon-choosefile {
+	background-position: 0 -288px;
+}

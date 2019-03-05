@@ -1,0 +1,10 @@
+#%PAM-1.0
+
+auth        include      common-auth
+
+account     include      common-account
+
+password    include      common-password
+
+session     optional     pam_mkhomedir.so skel=/etc/skel/ umask=0022
+session     optional     pam_exec.so type=open_session /usr/bin/antilles-key-generator

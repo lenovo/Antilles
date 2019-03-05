@@ -1,0 +1,11 @@
+[Unit]
+Description=Monitor %i metric from confluent every 15 seconds
+BindsTo=antilles-confluent-mond.service
+After=network-online.target postgresql.service
+
+[Timer]
+OnCalendar=*:*:0/15
+Unit=antilles-confluent-mond-%i.service
+
+[Install]
+WantedBy=antilles-confluent-mond.service

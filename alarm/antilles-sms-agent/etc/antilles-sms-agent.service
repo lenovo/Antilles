@@ -1,0 +1,13 @@
+[Unit]
+Description=sms alarm agent for antilles project
+After=multi-user.target
+
+[Service]
+EnvironmentFile=-/etc/sysconfig/antilles-sms-agent
+ExecStart=/usr/bin/gunicorn --paste /etc/antilles/sms-agent.ini
+User=antilles
+KillMode=mixed
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

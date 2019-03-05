@@ -1,0 +1,6 @@
+bumpversion>=0.5
+tox>=2.8
+setuptools>=36.0
+flake8>=3.4
+Cython>=0.27
+isort>=4.2

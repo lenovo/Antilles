@@ -1,0 +1,260 @@
+@charset "UTF-8";
+
+
+/*---------left bar menu---------*/
+
+.antilles-left-bar i[class^='el-erp'] {
+  margin-left: 4px;
+  color: #bfcad9;
+}
+.antilles-left-bar .el-menu-item:hover i[class^='el-erp'],
+.antilles-left-bar .el-menu-item:hover span{
+  color: #fff;
+}
+.antilles-left-bar .el-menu-item.is-active i[class^='el-erp'],
+.antilles-left-bar .el-menu-item.is-active span {
+  color: #38AAF2;
+}
+
+/* --------- gpus color range ---------*/
+.color-just .el-slider__runway, .color-back .el-slider__bar {
+  background-color: #d9eeff;
+}
+.color-back .el-slider__runway, .color-just .el-slider__bar {
+  background-color: #33AAFF;
+}
+/*--------- job tetail tab ----------*/
+.job-detail-tab.el-tabs .el-tabs__content {
+  overflow: inherit !important;
+}
+
+/*--------- component table ----------*/
+
+/*report/table的布局方式*/
+.table-style{
+  background: #fff;
+  box-sizing: border-box;
+  height:100%;
+}
+.report-table-style{
+  padding:10px;
+  height:100%;
+  box-sizing:border-box;
+}
+.table-top-manage{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.table-styles{
+  background: #fff;
+  height:100%;
+}
+.antilles-date-picke {
+  display: flex;
+  margin-left: 150px;
+}
+.reportFilter-button{
+  margin-left:50px;
+}
+.reportFilter{
+  background: #fff;
+  padding: 20px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.reportPreview{
+  background: #fff;
+  padding: 20px;
+  font-size: 14px;
+  display: flex;
+  margin-top:10px;
+  box-sizing: border-box;
+}
+
+.reportTime{
+    border-bottom:1px dashed #eee;
+    margin-bottom: 20px;
+  }
+/*表格后边的小图标*/
+.table-icon-button{
+  padding: 4px;
+  background: transparent;
+  border:0;
+}
+.table-icon-button:hover{
+  border-color: transparent;
+  background: transparent;
+}
+.table-icon-button i{
+  width: 14px;
+  height: 14px;
+  margin: 0;
+}
+.table-icon-button i:hover{
+  color:#40aaff;
+}
+
+
+
+/*--------- setting notify ----------*/
+/*notify3行显示*/
+.notify-email-form{
+  position: relative;
+}
+.notify-email-radio{
+  position: absolute;
+  top:0;
+  right: 0;
+}
+.notify-email-img{
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+.notify-footer{
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+/*---------Menu---------*/
+
+.el-menu-vertical-demo:not(.el-menu--collapse) {
+  width: 236px;
+}
+
+/*---------Table---------*/
+
+.el-table .cell .ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 10px;
+}
+.el-table .cell:hover .ellipsis {
+  text-overflow:inherit;
+  overflow: visible;
+  white-space: pre-line;
+}
+.el-table .caret-wrapper {
+  width: 24px !important;
+}
+.el-table .sort-caret {
+  color: #9AD1FB;
+}
+.el-table .ascending .sort-caret.ascending, .el-table .descending .sort-caret.descending {
+  color: #fff;
+}
+.el-table .el-button {
+  padding: 0;
+}
+
+/*表格中的上升和下降*/
+.el-table .caret-wrapper {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+   /* margin-left: 5px;*/
+    margin-top: -2px;
+    width: 16px;
+    height: 30px;
+    overflow: visible;
+    overflow: initial;
+}
+.el-table .sort-caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: 0;
+    content: "";
+    position: absolute;
+    left: 3px;
+    z-index: 2;
+}
+/*上升*/
+.el-table .sort-caret.ascending {
+    background: url('images/sort_up_w.svg');
+    width: 12px;
+    height: 12px;
+    top:9px;
+}
+/*下降*/
+.el-table .sort-caret.descending {
+    top:9px;
+    left:12px;
+    width: 12px;
+    height: 12px;
+    background: url('images/sort_down_w.svg');
+}
+.el-table .ascending .sort-caret.ascending {
+    top:9px;
+    width: 12px;
+    height: 12px;
+    background: url('images/sort_up_b.svg');
+}
+.el-table .descending .sort-caret.descending {
+    top:9px;
+    left:12px;
+    background: url('images/sort_down_b.svg');
+    width: 12px;
+    height: 12px;
+}
+.table-but-icon {
+  cursor: pointer;
+}
+.table-but-icon:hover {
+  color: #409EFF;
+}
+
+/*---------Button---------*/
+
+.el-button.no-border {
+  border: none;
+  background-color: transparent;
+}
+/*---------Tab---------*/
+
+.el-tabs--bottom .el-tabs__item:nth-child(2), .el-tabs--top .el-tabs__item:nth-child(2) {
+  padding-left: 20px;
+}
+
+/*--------form---------*/
+
+.el-form-item.is-error {
+  margin-bottom: 0px;
+}
+.el-form-item .el-form-item__error {
+  min-height: 20px;
+  position: inherit;
+}
+
+.report-alarm-bottom{
+  margin-top:20px;
+  box-sizing: border-box;
+  background: #fff;
+}
+.nodata{
+  height: 500px;
+  text-align: center;
+  background: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+.act .demonstration{border: 1px solid #dcdfe6;border-radius: 3px;line-height: 32px;display: block;padding: 0 15px 0 15px;cursor: pointer;color: #606266;font-size: 12px;}
+.act .demonstration:hover{
+  color: #409EFF;
+  border-color: #c6e2ff;
+  background-color: #ecf5ff;}
+.act .demonstration:focus{
+  color: #409EFF;
+  border-color: #c6e2ff;
+  background-color: #ecf5ff;}
+.el-dropdown-menu li button{width: 100%;text-align: left;}

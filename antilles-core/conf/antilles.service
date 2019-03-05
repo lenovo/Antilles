@@ -1,0 +1,12 @@
+[Unit]
+Description=antilles project
+After=rabbitmq-server.service postgresql.service confluent.service influxdb.service
+
+[Service]
+EnvironmentFile=-/etc/sysconfig/antilles
+ExecStart=/usr/bin/antilles start -n
+Restart=on-failure
+LimitNOFILE=10000
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,226 @@
+
+@font-face {
+  font-family: "iconfont";
+  src: url('iconfont.woff')format("woff"),
+      url('iconfont.ttf') format('truetype');
+}
+[class^="el-erp"], [class*="el-erp"] {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  margin-right: 5px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.el-erp-zanting:before { content: "\e713"; }
+
+.el-erp-kaishi:before { content: "\e6de"; }
+
+.el-erp-home:before { content: "\e601"; }
+
+.el-erp-monitor:before { content: "\e602"; }
+
+.el-erp-userGroup:before { content: "\e605"; }
+
+.el-erp-user:before { content: "\e606"; }
+
+.el-erp-listview:before { content: "\e608"; }
+
+.el-erp-physicalview:before { content: "\e609"; }
+
+.el-erp-groupview:before { content: "\e60a"; }
+
+.el-erp-alarm:before { content: "\e60b"; }
+
+.el-erp-job:before { content: "\e60c"; }
+
+.el-erp-operationlog:before { content: "\e60d"; }
+
+.el-erp-billinggroup:before { content: "\e60e"; }
+
+.el-erp-store:before { content: "\e611"; }
+
+.el-erp-container:before { content: "\e612"; }
+
+.el-erp-jobreport:before { content: "\e613"; }
+
+.el-erp-report:before { content: "\e614"; }
+
+.el-erp-alarmreport:before { content: "\e615"; }
+
+.el-erp-operationreport:before { content: "\e616"; }
+
+.el-erp-vnc:before { content: "\e617"; }
+
+.el-erp-rizhi:before { content: "\e618"; }
+
+.el-erp-alarmpolicy:before { content: "\e619"; }
+
+.el-erp-notifygroup:before { content: "\e61a"; }
+
+.el-erp-admin:before { content: "\e61b"; }
+
+.el-erp-tools:before { content: "\e61d"; }
+
+.el-erp-tools1:before { content: "\e61e"; }
+
+.el-erp-script:before { content: "\e61f"; }
+
+.el-erp-notifyadapter:before { content: "\e620"; }
+
+.el-erp-expert:before { content: "\e621"; }
+
+.el-erp-Managefiles:before { content: "\e622"; }
+
+.el-erp-topology:before { content: "\e624"; }
+
+.el-erp-models:before { content: "\e625"; }
+
+.el-erp-dataset:before { content: "\e626"; }
+
+.el-erp-jobtemplates:before { content: "\e627"; }
+
+.el-erp-money:before { content: "\e628"; }
+
+.el-erp-edit:before { content: "\e629"; }
+
+.el-erp-fix:before { content: "\e62a"; }
+
+.el-erp-delete:before { content: "\e62b"; }
+
+.el-erp-on:before { content: "\e62c"; }
+
+.el-erp-comfirm:before { content: "\e62d"; }
+
+.el-erp-SSH:before { content: "\e62e"; }
+
+.el-erp-off:before { content: "\e62f"; }
+
+.el-erp-consolo:before { content: "\e630"; }
+
+.el-erp-button_rerun:before { content: "\e631"; }
+
+.el-erp-copy:before { content: "\e632"; }
+
+.el-erp-catalog:before { content: "\e633"; }
+
+.el-erp-monitor_house:before { content: "\e635"; }
+
+.el-erp-monitor_power:before { content: "\e636"; }
+
+.el-erp-monitor_node:before { content: "\e637"; }
+
+.el-erp-cpu:before { content: "\e638"; }
+
+.el-erp-memory:before { content: "\e639"; }
+
+.el-erp-network:before { content: "\e63a"; }
+
+.el-erp-storage:before { content: "\e63b"; }
+
+.el-erp-install:before { content: "\e63c"; }
+
+.el-erp-download:before { content: "\e63d"; }
+
+.el-erp-browse:before { content: "\e640"; }
+
+.el-erp-write:before { content: "\e634"; }
+
+.el-erp-read:before { content: "\e63f"; }
+
+.el-erp-temperature:before { content: "\e642"; }
+
+.el-erp-rack:before { content: "\e643"; }
+
+.el-erp-job1:before { content: "\e644"; }
+
+.el-erp-storage_1:before { content: "\e646"; }
+
+.el-erp-load:before { content: "\e647"; }
+
+.el-erp-changepassword:before { content: "\e649"; }
+
+.el-erp-uninstall:before { content: "\e63e"; }
+
+.el-erp-cancel:before { content: "\e641"; }
+
+.el-erp-logout:before { content: "\e645"; }
+
+.el-erp-logo:before { content: "\e648"; }
+
+.el-erp-vnc_open:before { content: "\e64a"; }
+
+.el-erp-hold:before { content: "\e64b"; }
+
+.el-erp-release:before { content: "\e64c"; }
+
+.el-erp-GPU:before { content: "\e64f"; }
+
+.el-erp-pac_favel-erp:before { content: "\e651"; }
+
+.el-erp-rtm_favel-erp:before { content: "\e652"; }
+
+.el-erp-IBM:before { content: "\e656"; }
+
+.el-erp-id:before { content: "\e658"; }
+
+.el-erp-details:before { content: "\e659"; }
+
+.el-erp-email:before { content: "\e65a"; }
+
+.el-erp-role:before { content: "\e65b"; }
+
+.el-erp-cube-lifangti:before { content: "\e65c"; }
+
+.el-erp-view:before { content: "\e65d"; }
+
+.el-erp-data:before { content: "\e65e"; }
+
+.el-erp-Collection:before { content: "\e65f"; }
+
+.el-erp-parallel:before { content: "\e660"; }
+
+.el-erp-process:before { content: "\e661"; }
+
+.el-erp-Assets:before { content: "\e662"; }
+
+.el-erp-time:before { content: "\e663"; }
+
+.el-erp-error:before { content: "\e664"; }
+
+.el-erp-critical:before { content: "\e665"; }
+
+.el-erp-able:before { content: "\e666"; }
+
+.el-erp-poweron:before { content: "\e667"; }
+
+.el-erp-poweroff:before { content: "\e668"; }
+
+.el-erp-warming:before { content: "\e669"; }
+
+.el-erp-disable:before { content: "\e66a"; }
+
+.el-erp-info:before { content: "\e66b"; }
+
+.el-erp-power:before { content: "\e66c"; }
+
+.el-erp-Releases:before { content: "\e66d"; }
+
+.el-erp-Canceltherelease:before { content: "\e66e"; }
+
+.el-erp-eglass-box:before { content: "\e66f"; }
+
+.el-erp-noalerts:before { content: "\e670"; }
+
+.el-erp-alerts:before { content: "\e671"; }
+
+.el-erp-job-copy:before { content: "\e714"; }
+
+.el-erp-scheduler:before { content: "\e672"; }
+
+.el-erp-help:before { content: "\e673"; }
+
+.el-erp-Resource:before { content: "\e674"; }
+
+.el-erp-state:before { content: "\e675"; }

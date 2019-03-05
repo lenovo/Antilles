@@ -1,0 +1,10 @@
+include requirements.txt dev-requirements.txt
+include tox.ini .bumpversion.cfg
+include antilles-vnc-mond.spec
+include COPYING.BSD COPYING.EPL
+
+graft etc
+graft antilles
+
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]

@@ -1,0 +1,7 @@
+include requirements.txt
+include antilles-monitor-tool.spec
+include COPYING.BSD COPYING.EPL
+include .bumpversion.cfg
+
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]

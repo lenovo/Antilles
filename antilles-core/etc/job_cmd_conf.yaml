@@ -1,0 +1,4 @@
+ansys: job_daemon_project/job_daemon/job_template_cmd/gen_ansys_job_file
+common: job_daemon_project/job_daemon/job_template_cmd/gen_common_job_file
+comsol: job_daemon_project/job_daemon/job_template_cmd/gen_comsol_job_file
+mpi: job_daemon_project/job_daemon/job_template_cmd/gen_mpi_job_file

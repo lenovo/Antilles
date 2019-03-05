@@ -1,0 +1,24 @@
+graft job_daemon_project
+graft openHPC_web_project
+
+graft etc
+graft conf
+graft libs
+graft src
+
+prune */.cache
+prune */.pytest_cache
+prune */.tox
+prune */.eggs
+prune */*.egg-info
+prune */dist
+
+global-exclude .coverage
+global-exclude .gitignore
+
+include antilles antilles-core.spec
+indlude requirements.txt dev-requirements.txt
+include COPYING.BSD COPYING.EPL .bumpversion.cfg
+
+global-exclude __pycache__
+global-exclude *.py[co]

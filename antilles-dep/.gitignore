@@ -1,0 +1,14 @@
+.idea
+.osc
+
+# obs file
+_service
+_multibuild
+*-rpmlint
+
+# soyrce file
+*.tar
+*.xz
+*.gz
+*.tgz
+

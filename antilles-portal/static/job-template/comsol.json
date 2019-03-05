@@ -1,0 +1,89 @@
+{
+  "code": "comsol",
+  "name": "COMSOL",
+  "logoUrl": "static/image/job-templates/comsol.jpg",
+  "description": "COMSOL Multiphysics® is a general-purpose software platform, based on advanced numerical methods, for modeling and simulating physics-based problems. With COMSOL Multiphysics, you will be able to account for coupled or multiphysics phenomena.",
+  "category": "HPC",
+  "params": [
+    {
+      "id": "run_mode",
+      "type": "checkbox",
+      "label": {
+        "en": "Run mode",
+        "zh": "运行模式"
+      },
+      "options": [
+        {
+          "value": "gui",
+          "label": {
+            "en": "GUI",
+            "zh": "图形界面"
+          }
+        }
+      ]
+    },
+    {
+      "id": "workingdir",
+      "type": "folder",
+      "label": {
+        "en": "Working directory",
+        "zh": "工作目录"
+      },
+      "required": true
+    },
+    {
+      "id": "comsol_bin",
+      "type": "file",
+      "label": {
+        "en": "COMSOL binary",
+        "zh": "COMSOL可执行文件"
+      },
+      "required": true
+    },
+    {
+      "id": "comsol_env_file",
+      "type": "file",
+      "label": {
+        "en": "COMSOL environment",
+        "zh": "COMSOL环境配置文件"
+      },
+      "required": false
+    },
+    {
+      "id": "comsol_run_arguments",
+      "type": "string",
+      "label": {
+        "en": "COMSOL run arguments",
+        "zh": "COMSOL运行参数"
+      },
+      "required": false
+    },
+    {
+      "id": "comsol_input_file",
+      "type": "file",
+      "label": {
+        "en": "COMSOL input",
+        "zh": "COMSOL输入文件"
+      },
+      "required": true
+    },
+    {
+      "id": "comsol_output_file",
+      "type": "string",
+      "label": {
+        "en": "COMSOL output",
+        "zh": "COMSOL输出文件"
+      },
+      "required": false
+    }
+  ],
+  "resourceOptions": [
+    "queue",
+    "nodes",
+    "exclusive",
+    "coresPerNode",
+    "ramSize",
+    "runTime"
+  ],
+  "notifyOptions": []
+}

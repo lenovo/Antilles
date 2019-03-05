@@ -1,0 +1,6 @@
+[run]
+source = antilles/mond/icinga
+omit =
+    antilles/mond/icinga/main.py
+    antilles/mond/icinga/exceptions.py
+

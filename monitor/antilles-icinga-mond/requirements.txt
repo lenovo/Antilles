@@ -1,0 +1,5 @@
+setuptools>=36.0
+influxdb>=5.0.0
+APScheduler>=3.5.1
+requests>=2.19.1
+simplejson>=3.16

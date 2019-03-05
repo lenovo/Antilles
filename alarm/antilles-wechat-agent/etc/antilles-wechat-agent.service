@@ -1,0 +1,13 @@
+[Unit]
+Description=Wechat alarm agent for antilles project
+After=multi-user.target
+
+[Service]
+EnvironmentFile=-/etc/sysconfig/antilles-wechat-agent
+ExecStart=/usr/bin/gunicorn --paste /etc/antilles/wechat-agent.ini
+User=antilles
+KillMode=mixed
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

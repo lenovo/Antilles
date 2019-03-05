@@ -1,0 +1,6 @@
+[Unit]
+Description=Monitor Xvnc process
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/antilles-vnc-mond

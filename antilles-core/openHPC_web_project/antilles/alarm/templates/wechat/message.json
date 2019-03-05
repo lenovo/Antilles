@@ -1,0 +1,19 @@
+{% load i18n %}
+{
+    "first": {
+        "value": "{% trans 'Node' %}: {{ node }}\n{% trans 'Level' %}: {{level}}",
+        "color": "#173177"
+    },
+    "performance": {
+        "value": "{{ name }}",
+        "color": "#173177"
+    },
+    "time": {
+        "value": "{{ create_time }}",
+        "color": "#173177"
+    },
+    "remark": {
+        "value": "{% trans 'Please deal with it in time!' %}",
+        "color": "#173177"
+    }
+}

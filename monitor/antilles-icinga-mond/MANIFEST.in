@@ -1,0 +1,9 @@
+include requirements.txt dev-requirements.txt
+include antilles-ganglia-mond.spec
+include COPYING.BSD COPYING.EPL
+include .bumpversion.cfg
+
+graft etc
+
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]

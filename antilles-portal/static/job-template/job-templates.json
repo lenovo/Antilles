@@ -1,0 +1,42 @@
+[
+  {
+    "code": "general",
+    "name": "General Job",
+    "logoUrl": "static/image/job-templates/general.jpg",
+    "description": "Create an Antilles general job",
+    "category": "General",
+    "featureCode": "antilles"
+  },
+  {
+    "code": "common",
+    "name": "Common Job",
+    "logoUrl": "static/image/job-templates/common.jpg",
+    "description": "Create an Antilles common job",
+    "category": "General",
+    "featureCode": "antilles"
+  },
+  {
+    "code": "mpi",
+    "name": "MPI",
+    "logoUrl": "static/image/job-templates/mpi.jpg",
+    "description": "Message Passing Interface (MPI) is a communication standard used in parallel computing and HPC applications. Use this template to submit your MPI application.",
+    "category": "HPC",
+    "featureCode": "hpc"
+  },
+  {
+    "code": "ansys",
+    "name": "ANSYS",
+    "logoUrl": "static/image/job-templates/ansys.jpg",
+    "description": "ANSYS offers a comprehensive software suite that spans the entire range of physics, providing access to virtually any field of engineering simulation that a design process requires.",
+    "category": "HPC",
+    "featureCode": "hpc"
+  },
+  {
+    "code": "comsol",
+    "name": "COMSOL",
+    "logoUrl": "static/image/job-templates/comsol.jpg",
+    "description": "COMSOL Multiphysics® is a general-purpose software platform, based on advanced numerical methods, for modeling and simulating physics-based problems. With COMSOL Multiphysics, you will be able to account for coupled or multiphysics phenomena.",
+    "category": "HPC",
+    "featureCode": "hpc"
+  }
+]

@@ -1,0 +1,326 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+"""
+Copyright © 2019-present Lenovo
+
+This file is licensed under both the BSD-3 license for individual use and
+EPL-1.0 license for commercial use. Full text of both licenses can be found in
+COPYING.BSD and COPYING.EPL files.
+"""
+
+import argparse
+import traceback
+import json
+import os
+import os.path
+import base64
+
+################################################################################
+# Introduction:
+# 1. The field is used to generate job file which customers do not need to
+#    modify.
+# 2. If you has any problem, please contact with Lenovo support engineer.
+################################################################################
+def auto_parse_cmd_line():
+    """Auto Parser Args"""
+    cmd_parser = argparse.ArgumentParser()
+
+    cmd_parser.add_argument("-j", "--json",
+                          action="store",
+                          dest="JSON",
+                          help="The json message from the web")
+
+    cmd_parser.add_argument("-o", "--output",
+                          action="store",
+                          dest="OUTPUT",
+                          help="The absolute path to save the jobfile")
+
+    cmd_parser.add_argument("-w", "--workspace",
+                          action="store",
+                          dest="WORKSPACE",
+                          help="The real path of the user's work folder")
+
+    cmd_option = cmd_parser.parse_args()
+
+    return base64.decodestring(cmd_option.JSON), cmd_option.OUTPUT, cmd_option.WORKSPACE
+
+
+def get_real_path(path, workspace):
+    relpath = path.replace("MyFolder", workspace, 1)
+    return relpath
+
+
+def generate_job_file(f_cache, absfilename):
+    if not absfilename:
+        return
+    try:
+        file_handle = open(absfilename, 'w')
+        file_handle.write(f_cache.encode('utf-8'))
+        file_handle.close()
+    except:
+        print traceback.format_exc()
+
+
+################################################################################
+# Introduction:
+# 1. The field bellows can be changed by yourself, you can make the generating
+#    rule for the job file.
+# 2. But there are some points to be care.
+# Remark:
+# 1. You can not change the name of the method and the parameters of the method.
+# 2. The type of the return value must be string.
+# 3. So you can only change the implement of the method.
+# 4. If the elements of the data contains file path just as "data['workingdir']"
+#    bellow, you need to call "get_real_path" to convert it to absolute path.
+#    Example: absworkdir = get_real_path(data['workingdir'], workspace)
+################################################################################
+def rule_generate_torque(data, workspace, absjobfile):
+    execmd = ''
+    f_cache = ''
+    f_cache += '#!/bin/bash' + '\n'
+    if 'jobname' in data:
+        f_cache += '#PBS -N ' + data['jobname'] + '\n'
+
+    f_cache += '#PBS -j oe' + '\n'
+
+    jobfile = os.path.basename(absjobfile).split(".")[0]
+    jobid = jobfile.split("_")[-1]
+    f_cache += '#PBS -o ' + data['jobname'] + '-' + jobid + '.out' + '\n'
+    f_cache += '#PBS -e ' + data['jobname'] + '-' + jobid + '.out' + '\n'
+
+    if 'queue' in data:
+        f_cache += '#PBS -q ' + data['queue'] + '\n'
+
+    if 'workingdir' in data:
+        absworkdir = get_real_path(data['workingdir'], workspace)
+        f_cache += '#PBS -d ' + absworkdir + '\n'
+        execmd = 'cd ' + absworkdir + '\n'
+
+    if 'mailtrigger' in data and len(data['mailtrigger']) > 0:
+        f_cache += '#PBS -m ' + data['mailtrigger'] + '\n'
+
+    if 'mail' in data and len(data['mail']) > 0:
+        f_cache += '#PBS -M ' + data['mail'] + '\n'
+
+    if 'walltime' in data and len(data['walltime']) > 0:
+        f_cache += '#PBS -l walltime=' + data['walltime'] + '\n'
+
+    if 'pnodescount' in data and data['pnodescount'] > 0:
+        if 'ppn' in data and data['ppn'] > 0:
+            f_cache += '#PBS -l nodes=' + str(data['pnodescount']) + ':ppn=' + str(data['ppn']) + '\n'
+
+        if 'pmem' in data and data['pmem'] > 0:
+            f_cache += '#PBS -l pmem=' + str(data['pmem']) + 'mb' + '\n'
+
+    f_cache += "echo current job id is $PBS_JOBID" + '\n'
+    f_cache += 'echo job start time is `date` \n'
+    f_cache += 'echo `hostname` \n'
+
+    if execmd:
+        f_cache += execmd
+
+    if 'mpi_env_file' in data and len(data['mpi_env_file'].strip()) > 0:
+        mpi_env_file = get_real_path(data['mpi_env_file'], workspace)
+        f_cache += 'source ' + mpi_env_file + '\n'
+
+    if 'mpi_prog' in data:
+        mpi_prog = get_real_path(data['mpi_prog'], workspace)
+        if 'mpi_run_arguments' in data and len(data['mpi_run_arguments']) > 0:
+            f_cache += 'mpirun ' + data['mpi_run_arguments'] + ' '
+        else:
+            f_cache += 'mpirun '
+        # Add container support
+        if 'container_image_path' in data and \
+            len(data['container_image_path']) > 0:
+            f_cache += get_container_command(workspace,
+                data['container_image_path']) + ' '
+        f_cache += mpi_prog + '\n'
+
+    f_cache += 'echo job end time is `date` \n'
+
+    return f_cache
+
+
+def rule_generate_lsf(data, workspace, absjobfile):
+    execmd = ''
+    f_cache = ''
+    f_cache += '#!/bin/bash' + '\n'
+    if 'jobname' in data:
+        f_cache += '#BSUB -J ' + data['jobname'] + '\n'
+
+    jobfile = os.path.basename(absjobfile).split(".")[0]
+    jobid = jobfile.split("_")[-1]
+    f_cache += '#BSUB -o ' + data['jobname'] + '-' + jobid + '.out' + '\n'
+    f_cache += '#BSUB -e ' + data['jobname'] + '-' + jobid + '.out' + '\n'
+
+    if 'queue' in data:
+        f_cache += '#BSUB -q ' + data['queue'] + '\n'
+
+    if 'workingdir' in data:
+        absworkdir = get_real_path(data['workingdir'], workspace)
+        f_cache += '#BSUB -cwd ' + absworkdir + '\n'
+        execmd = 'cd ' + absworkdir + '\n'
+
+    if 'mailtrigger' in data and len(data['mailtrigger']) > 0:
+        if data['mailtrigger'].find("b") >= 0:
+            f_cache += '#BSUB -B ' + '\n'
+        if data['mailtrigger'].find("e") >= 0:
+            f_cache += '#BSUB -N ' + '\n'
+
+    if 'mail' in data and len(data['mail']) > 0:
+        f_cache += '#BSUB -u ' + data['mail'] + '\n'
+
+    if 'walltime' in data and len(data['walltime']) > 0:
+        walltime = data['walltime']
+        items = walltime.split(':')
+        if len(items) > 2:
+            walltime = items[0] + ':' + items[1]
+            f_cache += '#BSUB -W ' + walltime + '\n'
+
+    if 'pnodescount' in data and data['pnodescount'] > 0:
+        if 'ppn' in data and data['ppn'] > 0:
+            cpucount = data['pnodescount'] * data['ppn']
+            if cpucount > 0:
+                f_cache += '#BSUB -n ' + str(cpucount) + '\n'
+                f_cache += '#BSUB -R span[ptile={0}]\n'.format(data['ppn'])
+
+        if 'pmem' in data and data['pmem'] > 0:
+            f_cache += '#BSUB -R rusage[mem=' + str(data['pmem']) + ']\n'
+
+    f_cache += 'echo job start time is `date` \n'
+    f_cache += 'echo `hostname` \n'
+
+    if execmd:
+        f_cache += execmd
+
+    if 'mpi_env_file' in data and len(data['mpi_env_file'].strip()) > 0:
+        mpi_env_file = get_real_path(data['mpi_env_file'], workspace)
+        f_cache += 'source ' + mpi_env_file + '\n'
+
+    if 'mpi_prog' in data:
+        mpi_prog = get_real_path(data['mpi_prog'], workspace)
+        if 'mpi_run_arguments' in data and len(data['mpi_run_arguments']) > 0:
+            f_cache += 'mpirun ' + data['mpi_run_arguments'] + ' '
+        else:
+            f_cache += 'mpirun '
+        # Add container support
+        if 'container_image_path' in data and \
+            len(data['container_image_path']) > 0:
+            f_cache += get_container_command(workspace,
+                data['container_image_path']) + ' '
+        f_cache += mpi_prog + '\n'
+
+    f_cache += 'echo job end time is `date` \n'
+
+    return f_cache
+
+
+def rule_generate_slurm(data, workspace, absjobfile):
+    execmd = ''
+    f_cache = ''
+    f_cache += '#!/bin/bash' + '\n'
+    if 'jobname' in data:
+        f_cache += '#SBATCH --job-name=' + data['jobname'] + '\n'
+
+    jobfile = os.path.basename(absjobfile).split(".")[0]
+    jobid = jobfile.split("_")[-1]
+    f_cache += '#SBATCH --output=' + data['jobname'] + '-' + jobid + '.out' + '\n'
+    f_cache += '#SBATCH --error=' + data['jobname'] + '-' + jobid + '.out' + '\n'
+
+    # f_cache += '#SBATCH --export=None\n'
+
+    if 'queue' in data:
+        f_cache += '#SBATCH --partition=' + data['queue'] + '\n'
+
+    if 'workingdir' in data:
+        absworkdir = get_real_path(data['workingdir'], workspace)
+        f_cache += '#SBATCH --workdir=' + absworkdir + '\n'
+        execmd = 'cd ' + absworkdir + '\n'
+
+    if 'mailtrigger' in data and len(data['mailtrigger']) > 0:
+        mail_type = []
+        if data['mailtrigger'].find("b") >= 0:
+            mail_type.append("BEGIN")
+        if data['mailtrigger'].find("e") >= 0:
+            mail_type.append("END")
+        f_cache += '#SBATCH --mail-type=' + ','.join(mail_type) + '\n'
+
+    if 'mail' in data and len(data['mail']) > 0:
+        f_cache += '#SBATCH --mail-user=' + data['mail'] + '\n'
+
+    if 'walltime' in data and len(data['walltime']) > 0:
+        f_cache += '#SBATCH --time=' + data['walltime'] + '\n'
+
+    if 'pnodescount' in data and data['pnodescount'] > 0:
+        f_cache += '#SBATCH --nodes=' + str(data['pnodescount']) + '\n'
+
+        if 'ppn' in data and data['ppn'] > 0:
+            f_cache += '#SBATCH --ntasks-per-node=' + str(data['ppn']) + '\n'
+
+        if 'pmem' in data and data['pmem'] > 0:
+            f_cache += '#SBATCH --mem=' + str(data['pmem']) + 'M' + '\n'
+
+    f_cache += 'echo job start time is `date` \n'
+    f_cache += 'echo `hostname` \n'
+
+    if execmd:
+        f_cache += execmd
+
+    if 'mpi_env_file' in data and len(data['mpi_env_file'].strip()) > 0:
+        mpi_env_file = get_real_path(data['mpi_env_file'], workspace)
+        f_cache += 'source ' + mpi_env_file + '\n'
+
+    if 'mpi_prog' in data:
+        mpi_prog = get_real_path(data['mpi_prog'], workspace)
+        if 'mpi_run_arguments' in data and len(data['mpi_run_arguments']) > 0:
+            f_cache += 'mpirun ' + data['mpi_run_arguments'] + ' '
+        else:
+            f_cache += 'mpirun '
+        # Add container support
+        if 'container_image_path' in data and \
+            len(data['container_image_path']) > 0:
+            f_cache += get_container_command(workspace,
+                data['container_image_path']) + ' '
+        f_cache += mpi_prog + '\n'
+
+    f_cache += 'echo job end time is `date` \n'
+
+    return f_cache
+
+
+def rule_generate(data, workspace, absjobfile):
+    from libs.util.confutil import ConfUtil
+    conf = ConfUtil.parse_paste_conf()
+
+    if conf['scheduler_software'] == "torque":
+        return rule_generate_torque(data, workspace, absjobfile)
+    elif conf['scheduler_software'] == "lsf":
+        return rule_generate_lsf(data, workspace, absjobfile)
+    elif conf['scheduler_software'] == "slurm":
+        return rule_generate_slurm(data, workspace, absjobfile)
+
+
+def get_container_command(workspace, image, gpu=False):
+    if gpu:
+        singularity_cmd = 'singularity exec --nv -B {0}:{0} {1}'
+    else:
+        singularity_cmd = 'singularity exec -B {0}:{0} {1}'
+    return singularity_cmd.format(workspace, image)
+
+
+################################################################################
+# Introduction:
+# 1. The field bellows is used to run the script, and you do not need to change
+#    it.
+# 2. If you has any problem, please contact with Lenovo support engineer.
+################################################################################
+if __name__ == '__main__':
+    try:
+        (data, absjobfile, workspace) = auto_parse_cmd_line()
+
+        job_content = rule_generate(json.loads(data), workspace, absjobfile)
+
+        generate_job_file(job_content, absjobfile)
+    except:
+        print traceback.format_exc()

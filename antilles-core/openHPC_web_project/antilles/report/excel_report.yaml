@@ -1,0 +1,52 @@
+
+jobs_details:
+    head: ["Job ID", "Job Name", "Status", "Queue", "Submit Time", "Start Time",
+        "End Time", "Submitter", "Cpu Core Num", "Cpu Running Time (s)", "Gpu Num", "Gpu Running Time (s)"]
+    title: "Job Detailed Report"
+jobs_statistics:
+    head: ["Submit Date", "Jobs Num", "Cpu Core Num", "Cpu Running Time (s)", "Gpu Num", "Gpu Running Time (s)"]
+    title: "Job Statistics Report"
+operation_details:
+    head: ["Time","Module","Operator","Operation","Operating Details"]
+    title: "Operation Log Detailed Report"
+alarm_details:
+    head: ["Alarm Time", "Alarm Name", "Alarm Source", "Alarm Level", "Alarm Status", "remark"]
+    title: "Alarm Detailed Report"
+alarm_statistics:
+    head: ["Alarm Date", "Critical", "Error", "Warning", "Information", "Total"]
+    title: "Alarm Statistics Report"
+user_details:
+    head: ["Submitter", ["Job ID", "Job Name", "Status", "Queue", "Submit Time", "Start Time", "End Time", "Submitter", "Cpu Core Num", "Cpu Running Time (s)", "Gpu Num", "Gpu Running Time (s)"]]
+    title: "User Job Detailed Report"
+user_statistics:
+    head: ["User Name", ["Submit Date", "User", "Job Num", "Cpu Core Num", "Cpu Running Time (s)", "Gpu Num", "Gpu Running Time (s)"]]
+    title: "User Job Statistics Report"
+bill_details:
+    head: ["Bill Group Name", ["Job ID", "Job Name", "Status", "Queue", "Submit Time", "Start Time",
+            "End Time", "Submitter", "Cpu Core Num", "Cpu Running Time (s)", "Gpu Num", "Gpu Running Time (s)"]]
+    title: "BillGroup Job Detailed Report"
+bill_statistics:
+    head: ["Bill Group Name", ["Submit Date", "Bill Group Name", "Job Num", "Cpu Core Num", "Cpu Running Time (s)", "Gpu Num", "Gpu Running Time (s)"]]
+    title: "BillGroup Job Statistics Report"
+user_storage_statistics:
+    head: ["User Name", "Storage Usage"]
+    title: "User Storage Usage Report"
+node_user_statistics:
+    head: ["Node Name", ["User Name", "TTY", "Login Time"]]
+    title: "Node User Report"
+user_login_statistics:
+    head: ["User Name", ["Node Name", "TTY", "Login Time"]]
+    title: "User Login Report"
+node_running_statistics:
+    cpu:
+      head: ["Node Name", ["Time", "Cpu Usage (%)"]]
+      title: "Node Running Status Report"
+      subtitle: "Cpu Usage"
+    mem:
+      head: ["Node Name", ["Time", "Mem Usage (%)"]]
+      title: "Node Running Status Report"
+      subtitle: "Mem Usage"
+    net:
+      head: ["Node Name", ["Time", "Network Usage (up/down)"]]
+      title: "Node Running Status Report"
+      subtitle: "Network Usage"

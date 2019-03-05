@@ -1,0 +1,10 @@
+enable antilles-confluent-mond@health.timer
+enable antilles-confluent-mond@power.timer
+enable antilles-confluent-mond@temp.timer
+enable antilles-confluent-mond@state.timer
+
+enable antilles-vnc-mond@xvnc.timer
+
+enable antilles-confluent-mond.service
+enable antilles-ganglia-mond.service
+enable antilles-vnc-mond.service

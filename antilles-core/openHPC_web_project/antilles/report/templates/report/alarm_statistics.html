@@ -1,0 +1,16 @@
+{% extends "report/single_report.html" %}
+{% load i18n %}
+{% block head %}
+<tr>
+	<th rowspan="2"></th>
+	<th rowspan="2">{% trans 'Alarm Time' %}</th>
+	<th colspan="5">{% trans 'Alarm Num' %}</th>
+</tr>
+<tr>
+	<th>{% trans 'Critical' %}</th>
+	<th>{% trans 'Error' %}</th>
+	<th>{% trans 'Warning' %}</th>
+	<th>{% trans 'Information' %}</th>
+	<th>{% trans 'Total' %}</th>
+</tr>
+{% endblock %}

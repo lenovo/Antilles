@@ -1,0 +1,94 @@
+#! /usr/bin/python
+# -*- coding: utf-8 -*-
+
+"""
+Copyright © 2019-present Lenovo
+
+This file is licensed under both the BSD-3 license for individual use and
+EPL-1.0 license for commercial use. Full text of both licenses can be found in
+COPYING.BSD and COPYING.EPL files.
+"""
+
+import datetime
+from distutils.file_util import write_file
+from os import path, chown, chmod
+from pwd import getpwnam
+
+from cryptography import x509
+from cryptography.hazmat.backends import default_backend
+from cryptography.hazmat.primitives import hashes, serialization
+from cryptography.hazmat.primitives.asymmetric import dh, ec
+from cryptography.x509.oid import NameOID
+
+user = getpwnam('nginx')
+
+
+def generate_private_key():
+    private_key = ec.generate_private_key(
+        curve=ec.SECP384R1,
+        backend=default_backend()
+    )
+    # Write our key to disk for safe keeping
+    write_file('/etc/nginx/ssl/server.key', [
+        private_key.private_bytes(
+            encoding=serialization.Encoding.PEM,
+            format=serialization.PrivateFormat.PKCS8,
+            encryption_algorithm=serialization.NoEncryption(),
+        )
+    ])
+    chmod('/etc/nginx/ssl/server.key', 0400)
+    chown('/etc/nginx/ssl/server.key', user.pw_uid, user.pw_gid)
+
+    return private_key
+
+
+def generate_certificate(private_key):
+    subject = issuer = x509.Name([
+        x509.NameAttribute(NameOID.COUNTRY_NAME, u'CN'),
+        x509.NameAttribute(NameOID.LOCALITY_NAME, u'Shanghai'),
+        x509.NameAttribute(NameOID.ORGANIZATION_NAME, u'Lenovo'),
+        x509.NameAttribute(NameOID.COMMON_NAME, u'localhost'),
+    ])
+
+    cert = x509.CertificateBuilder().subject_name(
+        subject
+    ).issuer_name(
+        issuer
+    ).public_key(
+        private_key.public_key()
+    ).serial_number(
+        x509.random_serial_number()
+    ).not_valid_before(
+        datetime.datetime.utcnow()
+    ).not_valid_after(
+        # Our certificate will be valid for 10 days
+        datetime.datetime.utcnow() + datetime.timedelta(days=365)
+    ).sign(private_key, hashes.SHA512(), default_backend())
+
+    write_file('/etc/nginx/ssl/server.crt', [cert.public_bytes(serialization.Encoding.PEM)])
+    chmod('/etc/nginx/ssl/server.crt', 0400)
+    chown('/etc/nginx/ssl/server.crt', user.pw_uid, user.pw_gid)
+
+
+def generate_dhparam():
+    if path.exists('/etc/nginx/ssl/dhparam.pem'):
+        return
+    params = dh.generate_parameters(generator=2, key_size=2048, backend=default_backend())
+
+    write_file(
+        '/etc/nginx/ssl/dhparam.pem',
+        [
+            params.parameter_bytes(
+                encoding=serialization.Encoding.PEM,
+                format=serialization.ParameterFormat.PKCS3
+            )
+        ]
+    )
+    chmod('/etc/nginx/ssl/dhparam.pem', 0400)
+    chown('/etc/nginx/ssl/dhparam.pem', user.pw_uid, user.pw_gid)
+
+
+if __name__ == '__main__':
+    key = generate_private_key()
+    generate_certificate(key)
+    generate_dhparam()

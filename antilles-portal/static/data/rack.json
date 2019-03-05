@@ -1,0 +1,458 @@
+[
+  {
+    "code": "rack",
+    "aliasCodes": [],
+    "type": "rack",
+    "frontimage": "RACK.png",
+    "padding": [18, 28, 15, 28],
+    "width_height": [310, 998],
+    "uheight": [21],
+    "gap": [2, 2]
+  },
+  {
+    "code": "Flex_Chassis",
+    "aliasCodes": ["7385", "7893", "8721", "8724"],
+    "type": "chassis",
+    "frontimage": "14slot.png",
+    "padding": [17, 10, 16, 10],
+    "width_height": [254, 228],
+    "uheight": [21],
+    "gap": [8, 2],
+    "location": {
+      "height": 8,
+      "width": 1
+    }
+  },
+  {
+    "code": "Nextscale_Chassis",
+    "aliasCodes": ["5456", "5468", "5469"],
+    "type": "chassis",
+    "frontimage": "12slot.png",
+    "padding": [3, 10, 2, 10], 
+    "width_height": [254, 136], 
+    "uheight": [21], 
+    "gap": [1, 2],
+    "location": {
+      "height": 7,
+      "width": 1
+    }
+  },
+  {
+    "code": "d2",
+    "aliasCodes": ["7X20"],
+    "type": "chassis",
+    "frontimage": "4slot.png",
+    "padding": [3,2,3,2],
+    "width_height": [254,44],
+    "uheight": [18],
+    "gap": [2,2],
+    "location": {
+      "height": 2,
+      "width": 1
+    }
+  },
+  {
+    "code": "n1200",
+    "aliasCodes": ["5456", "5468", "5469"],
+    "type": "chassis",
+    "frontimage": "N1200.png",
+    "padding": [2,12,3,12],
+    "width_height": [254,136],
+    "uheight": [21],
+    "gap": [1,1],
+    "location": {
+      "height": 6,
+      "width": 1
+    }
+  },
+  {
+    "code": "G8052",
+    "aliasCodes": ["7159"],
+    "type": "switch",
+    "frontimage": "1U_Lenovo_RackSwitch_G8052.png",
+    "location": {
+      "height": 1,
+      "width": 1
+    }
+  },
+  {
+    "code": "G8296",
+    "aliasCodes": ["7159"],
+    "type": "switch",
+    "frontimage": "2U_Lenovo_RackSwitch_G8296.png",
+    "location": {
+      "height": 2,
+      "width": 1
+    }
+  },
+  {
+    "code": "netappswitch",
+    "aliasCodes": [],
+    "type": "switch",
+    "frontimage": "1U-NetAppSwitch.png",
+    "location": {
+      "height": 1,
+      "width": 1
+    }
+  },
+  {
+    "code": "ibm",
+    "aliasCodes": ["5459", "7914", "8062"],
+    "type": "node",
+    "frontimage": "1U_3550M4.png",
+    "location": {
+      "height": 1,
+      "width": 1
+    }
+  },
+  {
+    "code": "3250M4",
+    "aliasCodes": ["2583"],
+    "type": "node",
+    "frontimage": "1U_3250M4.png",
+    "location":{
+      "height": 1,
+      "width": 1
+    }
+  },
+  {
+    "code": "3250M5",
+    "aliasCodes": ["5458"],
+    "type": "node",
+    "frontimage": "1U_3250M5.png",
+    "location":{
+      "height": 1,
+      "width": 1
+    }
+  },
+  {
+    "code": "3300M4",
+    "aliasCodes": ["7382"],
+    "type": "node",
+    "frontimage": "5U_3300M4.png",
+    "location":{
+      "height": 5,
+      "width": 1
+    }
+  },
+  {
+    "code": "3500M4",
+    "aliasCodes": ["7383"],
+    "type": "node",
+    "frontimage": "5U_3500M4.png",
+    "location":{
+      "height": 5,
+      "width": 1
+    }
+  },
+  {
+    "code": "3530M4",
+    "aliasCodes": ["7160"],
+    "type": "node",
+    "frontimage": "1U_3530M4.png",
+    "location":{
+      "height": 1,
+      "width": 1
+    }
+  },
+  {
+    "code": "3550",
+    "aliasCodes": ["7978"],
+    "type": "node",
+    "frontimage": "1U_3550.png",
+    "location":{
+      "height": 1,
+      "width": 1
+    }
+  },
+  {
+    "code": "3630M4",
+    "aliasCodes": ["7158"],
+    "type": "node",
+    "frontimage": "2U_3630M4.png",
+    "location":{
+      "height": 2,
+      "width": 1
+    }
+  },
+  {
+    "code": "3650",
+    "aliasCodes": ["7979"],
+    "type": "node",
+    "frontimage": "2U_3650.png",
+    "location":{
+      "height": 2,
+      "width": 1
+    }
+  },
+  {
+    "code": "3650M4",
+    "aliasCodes": ["7915", "8061"],
+    "type": "node",
+    "frontimage": "2U_3650M4.png",
+    "location": {
+      "height": 2,
+      "width": 1
+    }
+  },
+  {
+    "code": "3650M5",
+    "aliasCodes": ["5462", "8871"],
+    "type": "node",
+    "frontimage": "2U_3650M5.png",
+    "location": {
+      "height": 2,
+      "width": 1
+    }
+  },
+  {
+    "code": "3750",
+    "aliasCodes": [],
+    "type": "node",
+    "frontimage": "3750.png",
+    "location": {
+      "height": 2,
+      "width": 1
+    }
+  },
+  {
+    "code": "3750M4",
+    "aliasCodes": ["8718", "8722", "8733", "8752", "8753"],
+    "type": "node",
+    "frontimage": "2U_3750M4.png",
+    "location": {
+      "height": 2,
+      "width": 1
+    }
+  },
+  {
+    "code": "3850",
+    "aliasCodes": ["8864"],
+    "type": "node",
+    "frontimage": "3850.png",
+    "location": {
+      "height": 4,
+      "width": 1
+    }
+  },
+  {
+    "code": "3950",
+    "aliasCodes": [],
+    "type": "node",
+    "frontimage": "3950.png",
+    "location": {
+      "height": 8,
+      "width": 1
+    }
+  },
+  {
+    "code": "3950X5",
+    "aliasCodes": ["8872"],
+    "type": "node",
+    "frontimage": "4U_3950X5.png",
+    "location": {
+      "height": 4,
+      "width": 1
+    }
+  },
+  {
+    "code": "7000",
+    "aliasCodes": ["4939", "6195"],
+    "type": "node",
+    "frontimage": "v7000.png",
+    "location": {
+      "height": 2,
+      "width": 1
+    }
+  },
+  {
+    "code": "nx360",
+    "aliasCodes": [],
+    "type": "node",
+    "frontimage": "feihu_1.png",
+    "location": {
+      "height": 1,
+      "width": 0.5
+    }
+  },
+  {
+    "code": "nx360_2u",
+    "aliasCodes": [],
+    "type": "node",
+    "frontimage": "feihu_2.png",
+    "location": {
+      "height": 2,
+      "width": 0.5
+    }
+  },
+  {
+    "code": "dx360M4",
+    "aliasCodes": ["7913"],
+    "type": "node",
+    "frontimage": "2U_iDataPlex_dx360M4.png",
+    "location": {
+      "height": 2,
+      "width": 1
+    }
+  },
+  {
+    "code": "x220",
+    "aliasCodes": ["2585", "7906"],
+    "type": "node",
+    "frontimage": "ITE_x220.png",
+    "location":{
+      "height": 1,
+      "width": 0.5
+    }
+  },
+  {
+    "code": "x440",
+    "aliasCodes": ["2590", "7167", "7917"],
+    "type": "node",
+    "frontimage": "ITE_x440.png",
+    "location":{
+      "height": 1,
+      "width": 1
+    }
+  },
+  {
+    "code": "sd530",
+    "aliasCodes": ["7X21"],
+    "type": "node",
+    "frontimage": "Stark.png",
+    "location":{
+      "height": 1,
+      "width": 0.5
+    }
+  },
+  {
+    "code": "sr950",
+    "aliasCodes": ["7X11", "7X12", "7X13"],
+    "type": "node",
+    "frontimage": "SR950.png",
+    "location":{
+      "height": 4,
+      "width": 1
+    }
+  },
+  {
+    "code": "sr860",
+    "aliasCodes": ["7X69", "7X70"],
+    "type": "node",
+    "frontimage": "SR860.png",
+    "location":{
+      "height": 4,
+      "width": 1
+    }
+  },
+  {
+    "code": "sr670",
+    "aliasCodes": ["7Y36", "7Y37", "7Y38"],
+    "type": "node",
+    "frontimage": "SR670.png",
+    "location":{
+      "height": 2,
+      "width": 1
+    }
+  },
+  {
+    "code": "sr650",
+    "aliasCodes": ["7X05", "7X06"],
+    "type": "node",
+    "frontimage": "SR650.png",
+    "location":{
+      "height": 2,
+      "width": 1
+    }
+  },
+  {
+    "code": "sr630",
+    "aliasCodes": ["7X01", "7X02"],
+    "type": "node",
+    "frontimage": "SR630.png",
+    "location":{
+      "height": 1,
+      "width": 1
+    }
+  },
+  {
+    "code": "sd650",
+    "aliasCodes": ["7X58"],
+    "type": "node",
+    "frontimage": "SD650.png",
+    "location":{
+      "height": 1,
+      "width": 0.5
+    }
+  },
+  {
+    "code": "caracara",
+    "aliasCodes": [],
+    "type": "node",
+    "frontimage": "ITE_Caracara.png",
+    "location":{
+      "height": 1,
+      "width": 0.5
+    }
+  },
+  {
+    "code": "natahala",
+    "aliasCodes": [],
+    "type": "node",
+    "frontimage": "ITE_new_natahala.png",
+    "location":{
+      "height": 1,
+      "width": 1
+    }
+  },
+  {
+    "code": "natahala1",
+    "aliasCodes": [],
+    "type": "node",
+    "frontimage": "ITE_new_natahala1.png",
+    "location":{
+      "height": 1,
+      "width": 1
+    }
+  },
+  {
+    "code": "natahala_2u",
+    "aliasCodes": [],
+    "type": "node",
+    "frontimage": "ITE_new_natahala2.png",
+    "location":{
+      "height": 2,
+      "width": 1
+    }
+  },
+  {
+    "code": "natahala_4u",
+    "aliasCodes": [],
+    "type": "node",
+    "frontimage": "ITE_new_natahala4.png",
+    "location":{
+      "height": 4,
+      "width": 1
+    }
+  },
+  {
+    "code": "ne1032",
+    "aliasCodes": ["7159"],
+    "type": "node",
+    "frontimage": "NE1032.png",
+    "location":{
+      "height": 1,
+      "width": 1
+    }
+  },
+  {
+    "code": "ne1072t",
+    "aliasCodes": ["7159"],
+    "type": "node",
+    "frontimage": "NE1072T.png",
+    "location":{
+      "height": 1,
+      "width": 1
+    }
+  }
+]

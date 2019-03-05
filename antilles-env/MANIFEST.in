@@ -1,0 +1,7 @@
+graft src
+
+include antilles.sh
+include antilles-data-collector.py
+include COPYING.BSD COPYING.EPL
+include README.md
+include ssh_config

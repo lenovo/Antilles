@@ -1,0 +1,4 @@
+bumpversion>=0.5
+tox>=2.8
+setuptools>=36.0
+flake8>=3.4

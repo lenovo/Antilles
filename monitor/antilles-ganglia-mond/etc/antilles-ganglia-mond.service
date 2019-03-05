@@ -1,0 +1,10 @@
+[Unit]
+Description=Ganglia Meta Daemon in Python
+After=network-online.target postgresql.service
+
+[Service]
+ExecStart=/usr/bin/antilles-ganglia-mond -f
+User=antilles
+
+[Install]
+WantedBy=multi-user.target

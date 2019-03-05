@@ -1,0 +1,19 @@
+{% load i18n %}
+{
+    "first": {
+        "value": "{% trans 'Antilles test wechat, your wechat config success'%}",
+        "color": "#173177"
+    },
+    "performance": {
+        "value": "{% trans 'Antilles test wechat' %}",
+        "color": "#173177"
+    },
+    "time": {
+        "value": "{{ create_time }}",
+        "color": "#173177"
+    },
+    "remark": {
+        "value": "{% trans 'test success' %}",
+        "color": "#173177"
+    }
+}

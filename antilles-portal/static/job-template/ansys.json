@@ -1,0 +1,89 @@
+{
+  "code": "ansys",
+  "name": "ANSYS",
+  "logoUrl": "static/image/job-templates/ansys.jpg",
+  "description": "ANSYS offers a comprehensive software suite that spans the entire range of physics, providing access to virtually any field of engineering simulation that a design process requires.",
+  "category": "HPC",
+  "params": [
+    {
+      "id": "run_mode",
+      "type": "checkbox",
+      "label": {
+        "en": "Run mode",
+        "zh": "运行模式"
+      },
+      "options": [
+        {
+          "value": "gui",
+          "label": {
+            "en": "GUI",
+            "zh": "图形界面"
+          }
+        }
+      ]
+    },
+    {
+      "id": "workingdir",
+      "type": "folder",
+      "label": {
+        "en": "Working directory",
+        "zh": "工作目录"
+      },
+      "required": true
+    },
+    {
+      "id": "ansys_bin",
+      "type": "file",
+      "label": {
+        "en": "ANSYS binary",
+        "zh": "ANSYS可执行文件"
+      },
+      "required": true
+    },
+    {
+      "id": "ansys_env_file",
+      "type": "file",
+      "label": {
+        "en": "ANSYS environment",
+        "zh": "ANSYS环境配置文件"
+      },
+      "required": false
+    },
+    {
+      "id": "ansys_run_arguments",
+      "type": "string",
+      "label": {
+        "en": "ANSYS run arguments",
+        "zh": "ANSYS运行参数"
+      },
+      "required": false
+    },
+    {
+      "id": "ansys_input_file",
+      "type": "file",
+      "label": {
+        "en": "ANSYS input",
+        "zh": "ANSYS输入文件"
+      },
+      "required": true
+    },
+    {
+      "id": "ansys_output_file",
+      "type": "string",
+      "label": {
+        "en": "ANSYS output",
+        "zh": "ANSYS输出文件"
+      },
+      "required": false
+    }
+  ],
+  "resourceOptions": [
+    "queue",
+    "nodes",
+    "exclusive",
+    "coresPerNode",
+    "ramSize",
+    "runTime"
+  ],
+  "notifyOptions": []
+}

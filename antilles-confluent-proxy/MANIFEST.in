@@ -1,0 +1,10 @@
+include requirements.txt test-requirements.txt
+include .coveragerc tox.ini
+include antilles-confluent-proxy.spec
+include COPYING.BSD COPYING.EPL
+
+graft etc
+graft tests
+
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]

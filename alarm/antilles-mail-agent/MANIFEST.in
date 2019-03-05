@@ -1,0 +1,10 @@
+include requirements.txt test-requirements.txt dev-requirements.txt
+include .bumpversion .coveragerc tox.ini
+include antilles-mail-agent.spec
+include COPYING.BSD COPYING.EPL
+
+graft etc
+graft tests
+
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]

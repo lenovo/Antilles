@@ -1,0 +1,3 @@
+[run]
+source = antilles/agent/wechat
+omit = antilles/agent/wechat/main.py

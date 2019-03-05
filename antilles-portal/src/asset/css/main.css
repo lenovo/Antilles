@@ -1,0 +1,63 @@
+html,body {
+  margin:0 auto;
+  font-family: "Micsoft Yahei";
+  width: 100%;
+  height: 100%;
+  background:#E9EEF2;
+  color:#333;
+  font-size: 14px;
+}
+ul, p, h1, h2, h3, h4, h5, h6{
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+.box {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/*--------- background color #fff ---------*/
+.b-w {
+  background-color: #fff;
+}
+/*--------- height 100% ---------*/
+.height--100 {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/*---------padding 20---------*/
+.p-20 {padding: 20px;}
+.p-t-20 {padding-top: 20px;}
+.p-r-20 {padding-right: 20px;}
+.p-b-20 {padding-bottom: 20px;}
+.p-l-20 {padding-left: 20px;}
+/*---------padding 10---------*/
+.p-10 {padding: 10px;}
+.p-t-10 {padding-top: 10px;}
+.p-r-10 {padding-right: 10px;}
+.p-b-10 {padding-bottom: 10px;}
+.p-l-10 {padding-left: 10px;}
+/*---------margin 10---------*/
+.m-10 {margin: 10px;}
+.m-t-10 {margin-top: 10px;}
+.m-r-10 {margin-right: 10px;}
+.m-b-10 {margin-bottom: 10px;}
+.m-l-10 {margin-left: 10px;}
+/*---------margin 20---------*/
+.m-20 {margin: 20px;}
+.m-t-20 {margin-top: 20px;}
+.m-r-20 {margin-right: 20px;}
+.m-b-20 {margin-bottom: 20px;}
+.m-l-20 {margin-left: 20px;}
+
+.el-button--wrap {
+  white-space: inherit;
+}

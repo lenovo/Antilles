@@ -1,0 +1,5 @@
+username,role,last_name,first_name,bill_group_name, email
+amy, user,,, default_bill_group, amy@lenovo.com
+amy2, user,,, default_bill, amy2@lenovo.com
+alice, operator, Yu, alice, default_group, alice@lenovo.com
+peter, operator, Li, peter, cha, 

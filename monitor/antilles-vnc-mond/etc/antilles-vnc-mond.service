@@ -1,0 +1,11 @@
+[Unit]
+Description=Monitor VNC process
+After=network-online.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/bin/bash -c "echo Welcome to use %n"
+
+[Install]
+WantedBy=multi-user.target

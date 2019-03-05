@@ -1,0 +1,19 @@
+dn: dc=hpc,dc=com
+dc: hpc
+objectClass: top
+objectClass: domain
+
+dn: uid=admin,dc=hpc,dc=com
+uid: admin
+objectClass: top
+objectClass: account
+
+dn: ou=People,dc=hpc,dc=com
+ou: People
+objectClass: top
+objectClass: organizationalUnit
+
+dn: ou=Group,dc=hpc,dc=com
+ou: Group
+objectClass: top
+objectClass: organizationalUnit

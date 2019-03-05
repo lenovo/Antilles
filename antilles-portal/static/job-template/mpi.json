@@ -1,0 +1,55 @@
+{
+  "code": "mpi",
+  "name": "MPI",
+  "logoUrl": "static/image/job-templates/mpi.jpg",
+  "description": "Message Passing Interface (MPI) is a communication standard used in parallel computing and HPC applications. Use this template to submit your MPI application.",
+  "category": "HPC",
+  "framework": "other",
+  "params": [
+    {
+      "id": "workingdir",
+      "type": "folder",
+      "label": {
+        "en": "Working directory",
+        "zh": "工作目录"
+      },
+      "required": true
+    },
+    {
+      "id": "mpi_prog",
+      "type": "file",
+      "label": {
+        "en": "MPI program",
+        "zh": "MPI程序"
+      },
+      "required": true
+    },
+    {
+      "id": "mpi_env_file",
+      "type": "file",
+      "label": {
+        "en": "MPI environment",
+        "zh": "MPI环境配置文件"
+      },
+      "required": false
+    },
+    {
+      "id": "mpi_run_arguments",
+      "type": "string",
+      "label": {
+        "en": "MPI run arguments",
+        "zh": "MPI运行参数"
+      },
+      "required": false
+    }
+  ],
+  "resourceOptions": [
+    "queue",
+    "nodes",
+    "exclusive",
+    "coresPerNode",
+    "ramSize",
+    "runTime"
+  ],
+  "notifyOptions": []
+}

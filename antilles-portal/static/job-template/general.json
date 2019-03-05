@@ -1,0 +1,20 @@
+{
+  "code": "general",
+  "name": "General Job",
+  "logoUrl": "static/image/job-templates/general.jpg",
+  "description": "Create an Antilles general job",
+  "category": "General",
+  "params": [
+    {
+      "id": "jobfilename",
+      "type": "file",
+      "label": {
+        "en": "Job file",
+        "zh": "作业文件"
+      },
+      "required": true
+    }
+  ],
+  "resourceOptions": [],
+  "notifyOptions": []
+}

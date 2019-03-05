@@ -1,0 +1,36 @@
+{
+  "code": "common",
+  "name": "Common Job",
+  "logoUrl": "static/image/job-templates/common.jpg",
+  "description": "Create an Antilles common job",
+  "category": "General",
+  "params": [
+    {
+      "id": "workingdir",
+      "type": "folder",
+      "label": {
+        "en": "Working directory",
+        "zh": "工作目录"
+      },
+      "required": true
+    },
+    {
+      "id": "runscript",
+      "type": "text",
+      "label": {
+        "en": "Run script",
+        "zh": "运行脚本"
+      },
+      "required": true
+    }
+  ],
+  "resourceOptions": [
+    "queue",
+    "nodes",
+    "exclusive",
+    "coresPerNode",
+    "ramSize",
+    "runTime"
+  ],
+  "notifyOptions": []
+}

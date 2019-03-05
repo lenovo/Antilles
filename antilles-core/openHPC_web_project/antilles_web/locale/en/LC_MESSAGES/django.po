@@ -1,0 +1,293 @@
+# Copyright © 2019-present Lenovo
+# 
+# This file is licensed under both the BSD-3 license for individual use and
+# EPL-1.0 license for commercial use. Full text of both licenses can be found in
+# COPYING.BSD and COPYING.EPL files.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-08 08:36+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: openHPC_web_project/antilles/alarm/templates/mail/message.html:4
+#: openHPC_web_project/antilles/alarm/templates/sms/message.txt:2
+msgid "The alarm policy"
+msgstr ""
+
+#: openHPC_web_project/antilles/alarm/templates/mail/message.html:4
+#: openHPC_web_project/antilles/alarm/templates/sms/message.txt:2
+msgid "is triggered"
+msgstr ""
+
+#: openHPC_web_project/antilles/alarm/templates/mail/message.html:8
+#: openHPC_web_project/antilles/alarm/templates/sms/message.txt:3
+msgid "Node"
+msgstr ""
+
+#: openHPC_web_project/antilles/alarm/templates/mail/message.html:10
+#: openHPC_web_project/antilles/alarm/templates/sms/message.txt:4
+msgid "Level"
+msgstr ""
+
+#: openHPC_web_project/antilles/alarm/templates/mail/message.html:12
+#: openHPC_web_project/antilles/alarm/templates/mail/title.html:2
+#: openHPC_web_project/antilles/alarm/templates/sms/message.txt:5
+#: openHPC_web_project/antilles/report/templates/report/operation_details.html:6
+msgid "Time"
+msgstr ""
+
+#: openHPC_web_project/antilles/alarm/templates/mail/message.html:16
+msgid "Please deal with it in time!"
+msgstr ""
+
+#: openHPC_web_project/antilles/alarm/templates/mail/test.html:3
+#: openHPC_web_project/antilles/alarm/templates/mail/test_title.html:2
+msgid "Antilles test email"
+msgstr ""
+
+#: openHPC_web_project/antilles/alarm/templates/mail/test.html:4
+msgid "Your email config success"
+msgstr ""
+
+#: openHPC_web_project/antilles/alarm/templates/mail/title.html:2
+msgid "Alarm"
+msgstr ""
+
+#: openHPC_web_project/antilles/alarm/templates/sms/test.txt:2
+msgid "Antilles test sms, your sms modem config success"
+msgstr ""
+
+#: openHPC_web_project/antilles/report/reportbase.py:100
+#: openHPC_web_project/antilles/report/reportbase.py:104
+#: openHPC_web_project/antilles/report/templates/report/base_report.html:15
+#: openHPC_web_project/antilles/report/templates/report/node_running_statistics.html:40
+#: openHPC_web_project/antilles/report/templates/report/node_running_statistics_pdf.html:36
+msgid "created at"
+msgstr ""
+
+#: openHPC_web_project/antilles/report/reportbase.py:106
+#: openHPC_web_project/antilles/report/templates/report/base_report.html:20
+msgid "data cycle"
+msgstr ""
+
+#: openHPC_web_project/antilles/report/templates/report/alarm_details.html:6
+#: openHPC_web_project/antilles/report/templates/report/alarm_statistics.html:6
+msgid "Alarm Time"
+msgstr ""
+
+#: openHPC_web_project/antilles/report/templates/report/alarm_details.html:7
+msgid "Alarm Name"
+msgstr ""
+
+#: openHPC_web_project/antilles/report/templates/report/alarm_details.html:8
+msgid "Alarm Source"
+msgstr ""
+
+#: openHPC_web_project/antilles/report/templates/report/alarm_details.html:9
+msgid "Alarm Level"
+msgstr ""
+
+#: openHPC_web_project/antilles/report/templates/report/alarm_details.html:10
+msgid "Alarm Status"
+msgstr ""
+
+#: openHPC_web_project/antilles/report/templates/report/alarm_details.html:11
+msgid "Remark"
+msgstr ""
+
+#: openHPC_web_project/antilles/report/templates/report/alarm_statistics.html:7
+msgid "Alarm Num"
+msgstr ""
+
+#: openHPC_web_project/antilles/report/templates/report/alarm_statistics.html:10
+msgid "Critical"
+msgstr ""
+
+#: openHPC_web_project/antilles/report/templates/report/alarm_statistics.html:11
+msgid "Error"
+msgstr ""
+
+#: openHPC_web_project/antilles/report/templates/report/alarm_statistics.html:12
+msgid "Warning"
+msgstr ""
+
+#: openHPC_web_project/antilles/report/templates/report/alarm_statistics.html:13
+msgid "Information"
+msgstr ""
+
+#: openHPC_web_project/antilles/report/templates/report/alarm_statistics.html:14
+msgid "Total"
+msgstr ""
+
+#: openHPC_web_project/antilles/report/templates/report/bill_details.html:6
+#: openHPC_web_project/antilles/report/templates/report/bill_statistics.html:6
+#: openHPC_web_project/antilles/report/templates/report/bill_statistics.html:12
+msgid "Bill Group Name"
+msgstr ""
+
+#: openHPC_web_project/antilles/report/templates/report/bill_details.html:11
+#: openHPC_web_project/antilles/report/templates/report/jobs_details.html:6
+#: openHPC_web_project/antilles/report/templates/report/user_details.html:11
+msgid "Job ID"
+msgstr ""
+
+#: openHPC_web_project/antilles/report/templates/report/bill_details.html:12
+#: openHPC_web_project/antilles/report/templates/report/jobs_details.html:7
+#: openHPC_web_project/antilles/report/templates/report/user_details.html:12
+msgid "Job Name"
+msgstr ""
+
+#: openHPC_web_project/antilles/report/templates/report/bill_details.html:13
+#: openHPC_web_project/antilles/report/templates/report/jobs_details.html:8
+#: openHPC_web_project/antilles/report/templates/report/user_details.html:13
+msgid "Status"
+msgstr ""
+
+#: openHPC_web_project/antilles/report/templates/report/bill_details.html:14
+#: openHPC_web_project/antilles/report/templates/report/jobs_details.html:9
+#: openHPC_web_project/antilles/report/templates/report/user_details.html:14
+msgid "Queue"
+msgstr ""
+
+#: openHPC_web_project/antilles/report/templates/report/bill_details.html:15
+#: openHPC_web_project/antilles/report/templates/report/jobs_details.html:10
+#: openHPC_web_project/antilles/report/templates/report/user_details.html:15
+msgid "Submit Time"
+msgstr ""
+
+#: openHPC_web_project/antilles/report/templates/report/bill_details.html:16
+#: openHPC_web_project/antilles/report/templates/report/jobs_details.html:11
+#: openHPC_web_project/antilles/report/templates/report/user_details.html:16
+msgid "Start Time"
+msgstr ""
+
+#: openHPC_web_project/antilles/report/templates/report/bill_details.html:17
+#: openHPC_web_project/antilles/report/templates/report/jobs_details.html:12
+#: openHPC_web_project/antilles/report/templates/report/user_details.html:17
+msgid "End Time"
+msgstr ""
+
+#: openHPC_web_project/antilles/report/templates/report/bill_details.html:18
+#: openHPC_web_project/antilles/report/templates/report/jobs_details.html:13
+#: openHPC_web_project/antilles/report/templates/report/user_details.html:18
+msgid "Submitter"
+msgstr ""
+
+#: openHPC_web_project/antilles/report/templates/report/bill_details.html:19
+#: openHPC_web_project/antilles/report/templates/report/bill_statistics.html:14
+#: openHPC_web_project/antilles/report/templates/report/jobs_details.html:14
+#: openHPC_web_project/antilles/report/templates/report/jobs_statistics.html:8
+#: openHPC_web_project/antilles/report/templates/report/user_details.html:19
+#: openHPC_web_project/antilles/report/templates/report/user_statistics.html:14
+msgid "Cpu Core Num"
+msgstr ""
+
+#: openHPC_web_project/antilles/report/templates/report/bill_details.html:20
+#: openHPC_web_project/antilles/report/templates/report/bill_statistics.html:15
+#: openHPC_web_project/antilles/report/templates/report/jobs_details.html:15
+#: openHPC_web_project/antilles/report/templates/report/jobs_statistics.html:9
+#: openHPC_web_project/antilles/report/templates/report/user_details.html:20
+#: openHPC_web_project/antilles/report/templates/report/user_statistics.html:15
+msgid "Cpu Running Time (s)"
+msgstr ""
+
+#: openHPC_web_project/antilles/report/templates/report/bill_details.html:21
+#: openHPC_web_project/antilles/report/templates/report/bill_statistics.html:16
+#: openHPC_web_project/antilles/report/templates/report/jobs_details.html:16
+#: openHPC_web_project/antilles/report/templates/report/jobs_statistics.html:10
+#: openHPC_web_project/antilles/report/templates/report/user_details.html:21
+#: openHPC_web_project/antilles/report/templates/report/user_statistics.html:16
+msgid "Gpu Num"
+msgstr ""
+
+#: openHPC_web_project/antilles/report/templates/report/bill_details.html:22
+#: openHPC_web_project/antilles/report/templates/report/bill_statistics.html:17
+#: openHPC_web_project/antilles/report/templates/report/jobs_details.html:17
+#: openHPC_web_project/antilles/report/templates/report/jobs_statistics.html:11
+#: openHPC_web_project/antilles/report/templates/report/user_details.html:22
+#: openHPC_web_project/antilles/report/templates/report/user_statistics.html:17
+msgid "Gpu Running Time (s)"
+msgstr ""
+
+#: openHPC_web_project/antilles/report/templates/report/bill_statistics.html:11
+#: openHPC_web_project/antilles/report/templates/report/jobs_statistics.html:6
+#: openHPC_web_project/antilles/report/templates/report/user_statistics.html:11
+msgid "Submit Date"
+msgstr ""
+
+#: openHPC_web_project/antilles/report/templates/report/bill_statistics.html:13
+#: openHPC_web_project/antilles/report/templates/report/jobs_statistics.html:7
+#: openHPC_web_project/antilles/report/templates/report/user_statistics.html:13
+msgid "Job Num"
+msgstr ""
+
+#: openHPC_web_project/antilles/report/templates/report/operation_details.html:7
+msgid "Module"
+msgstr ""
+
+#: openHPC_web_project/antilles/report/templates/report/operation_details.html:8
+msgid "Operator"
+msgstr ""
+
+#: openHPC_web_project/antilles/report/templates/report/operation_details.html:9
+msgid "Operation"
+msgstr ""
+
+#: openHPC_web_project/antilles/report/templates/report/operation_details.html:10
+msgid "Operating Details"
+msgstr ""
+
+#: openHPC_web_project/antilles/report/templates/report/user_details.html:6
+msgid "UserName"
+msgstr ""
+
+#: openHPC_web_project/antilles/report/templates/report/user_statistics.html:6
+#: openHPC_web_project/antilles/report/templates/report/user_statistics.html:12
+msgid "User Name"
+msgstr ""
+
+#: openHPC_web_project/antilles/scheduler/utils.py:28
+#: openHPC_web_project/antilles/scheduler/views/jobs.py:426
+msgid "Error occured when creating bill group"
+msgstr ""
+
+#: openHPC_web_project/webconsole/exceptions.py:24
+msgid ""
+"You can not send delete request when the creation or updating request is in "
+"process."
+msgstr ""
+
+#: openHPC_web_project/webconsole/exceptions.py:29
+msgid ""
+"You can not send update request when the creation or delete request is in "
+"process."
+msgstr ""
+
+#: openHPC_web_project/webconsole/views.py:160
+#, python-format
+msgid "Can't get console for job: %s"
+msgstr ""
+
+#: openHPC_web_project/webconsole/views.py:178
+#, python-format
+msgid "update job: %(job_id)s, console: %(console)s"
+msgstr ""
+
+#: openHPC_web_project/webconsole/views.py:186
+#, python-format
+msgid "Create job: %s in DB JobConsole"
+msgstr ""
+
+#: openHPC_web_project/webconsole/views.py:259
+#, python-format
+msgid "There is no file: %s"
+msgstr ""

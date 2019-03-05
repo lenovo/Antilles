@@ -1,0 +1,4 @@
+include COPYING.BSD COPYING.EPL
+include antilles.preset
+include macros.antilles
+include antilles-base.spec
