@@ -1,10 +1,10 @@
-This application was designed using open source software distributed
+This application was designed using third party open source software distributed
 under associated licenses, acknowledgements and required copyright notices listed below:
 
 =============================================================================================
 　　　　monitor/antilles-ganglia-mond/pygmetad
 =============================================================================================
-Homepage: https://github.com/ganglia/monitor-core/tree/master/gmetad-python/Gmetad 
+Homepage: https://github.com/ganglia/monitor-core/tree/master/gmetad-python/Gmetad
 * Portions Copyright (C) 2008 Novell, Inc. All rights reserved.
 *
 * Redistribution and use in source and binary forms, with or without
@@ -36,7 +36,7 @@ Homepage: https://github.com/ganglia/monitor-core/tree/master/gmetad-python/Gmet
 =============================================================================================
 　　　　antilles-dep/gmond-gpu-module/nvidia.py
 =============================================================================================
-Homepage: https://github.com/ganglia/gmond_python_modules/tree/master/gpu/nvidia/python_modules 
+Homepage: https://github.com/ganglia/gmond_python_modules/tree/master/gpu/nvidia/python_modules
 # NVIDIA GPU metric module using the Python bindings for NVML
 #
 # (C)opyright 2011, 2012 Bernard Li <bernard@vanhpc.org>
@@ -67,7 +67,7 @@ Homepage: https://github.com/ganglia/gmond_python_modules/tree/master/gpu/nvidia
 /antilles-portal/static/js-ext/jquery/jquery.min.map
 v3.2.1
 =============================================================================================
-Homepage: https://github.com/jquery/jquery/ 
+Homepage: https://github.com/jquery/jquery/
 Copyright JS Foundation and other contributors, https://js.foundation/
 
 Permission is hereby granted, free of charge, to any person obtaining
@@ -157,7 +157,7 @@ antilles-portal/static/js-ext/elfinder/proxy/elFinderSupportVer1.js
 
 v2
 =============================================================================================
-Homepage: https://github.com/Studio-42/elFinder/ 
+Homepage: https://github.com/Studio-42/elFinder/
 elFinder is issued under a 3-clauses BSD license.
 
 Copyright (c) 2009-2018, Studio 42
@@ -177,7 +177,7 @@ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR P
 =============================================================================================
 　　　　antilles-portal/static/js-ext/elfinder/ace/ace.js 1.2.8
 =============================================================================================
-Homepage: https://github.com/ajaxorg/ace/ 
+Homepage: https://github.com/ajaxorg/ace/
 Copyright (c) 2010, Ajax.org B.V.
 All rights reserved.
 
@@ -204,7 +204,7 @@ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 =============================================================================================
-VuewJS/Vue v2.5.16
+VueJS/Vue v2.5.16
 =============================================================================================
 Homepage: https://registry.npmjs.org/vue/-/vue-2.5.16.tgz
 The MIT License (MIT)
@@ -266,7 +266,7 @@ THE SOFTWARE.
 =============================================================================================
 Vue-i18n v7.3.2
 =============================================================================================
-Homepage: https://registry.npmjs.org/vue-i18n/-/vue-i18n-7.3.2.tgz   
+Homepage: https://registry.npmjs.org/vue-i18n/-/vue-i18n-7.3.2.tgz
 The MIT License (MIT)
 
 Copyright (c) 2016 kazuya kawaguchi
@@ -318,8 +318,8 @@ SOFTWARE.
 =============================================================================================
 Vue-resource v1.3.4
 =============================================================================================
-Homepage: https://registry.npmjs.org/vue-resource/-/vue-resource-1.3.4.tgz 
- 
+Homepage: https://registry.npmjs.org/vue-resource/-/vue-resource-1.3.4.tgz
+
 The MIT License (MIT)
 
 Copyright (c) 2015-2017 steffans
@@ -345,7 +345,7 @@ THE SOFTWARE.
 =============================================================================================
 　　　　Echarts 4.1.0
 =============================================================================================
-Homepage: https://registry.npmjs.org/echarts/-/echarts-4.1.0.tgz 
+Homepage: https://registry.npmjs.org/echarts/-/echarts-4.1.0.tgz
 
 Apache ECharts (incubating)
 Copyright 2017-2018 The Apache Software Foundation
@@ -457,7 +457,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 =============================================================================================
 　　　　jwt-decode 2.2.0
 =============================================================================================
-Homepage: https://github.com/auth0/jwt-decode/tree/v2.2.0 
+Homepage: https://github.com/auth0/jwt-decode/tree/v2.2.0
 The MIT License (MIT)
 
 Copyright (c) 2015 Auth0, Inc. <support@auth0.com> (http://auth0.com)
@@ -482,7 +482,7 @@ SOFTWARE.
 =============================================================================================
 Font-Awesome v4.7.0
 =============================================================================================
-Homepage: https://registry.npmjs.org/font-awesome/-/font-awesome-4.7.0.tgz 
+Homepage: https://registry.npmjs.org/font-awesome/-/font-awesome-4.7.0.tgz
 
 - The Font Awesome font is licensed under the SIL OFL 1.1:
   - http://scripts.sil.org/OFL
@@ -497,7 +497,7 @@ Homepage: https://registry.npmjs.org/font-awesome/-/font-awesome-4.7.0.tgz
 =============================================================================================
 　　　　google-libphonenumber/dist/libphonenumber.js 3.1.8
 =============================================================================================
-Homepage: https://github.com/ruimarinho/google-libphonenumber/blob/v3.1.8/dist/libphonenumber.js 
+Homepage: https://github.com/ruimarinho/google-libphonenumber/blob/v3.1.8/dist/libphonenumber.js
  Protocol Buffer 2 Copyright 2008 Google Inc.
 All other code copyright its respective owners.
 Copyright (C) 2010 The Libphonenumber Authors
@@ -519,7 +519,7 @@ PLEASE REFER TO APACHE-2.0 LICENSE TEXT BELOW
 =============================================================================================
 /antilles-portal/static/js-extern/termwindow/term.js  v0.0.7
 =============================================================================================
-Homepage: https://github.com/chjj/term.js/tree/v0.0.7 
+Homepage: https://github.com/chjj/term.js/tree/v0.0.7
 /**
 * term.js - an xterm emulator
 * Copyright (c) 2012-2013, Christopher Jeffrey (MIT License)
