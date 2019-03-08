@@ -67,7 +67,7 @@ def get_gpu_num():
     return int(nvmlDeviceGetCount())
 
 # Copyright (C) 2018-present Lenovo. All rights reserved.
-# Licensed under both the BSD-3 license for individual use and
+# Licensed under both the BSD-3 license for individual/non-commercial use and
 # EPL-1.0 license for commercial use. Full text of both licenses can be found in
 # COPYING.BSD and COPYING.EPL files.
 # Changed the function name to comply with naming specifications
@@ -112,7 +112,7 @@ def gpu_device_handler(name):
         return int(nvmlDeviceGetMemoryInfo(gpu_device).used/1048576)
 
     # Copyright (C) 2018-present Lenovo. All rights reserved.
-    # Licensed under both the BSD-3 license for individual use and
+    # Licensed under both the BSD-3 license for individual/non-commercial use and
     # EPL-1.0 license for commercial use. Full text of both licenses can be found in
     # COPYING.BSD and COPYING.EPL files.
     # Functionality added to get memory used percentage
@@ -233,7 +233,7 @@ def metric_init(params):
     build_descriptor('gpu_num', gpu_num_handler, default_time_max, 'uint', 'GPUs', 'zero', '%u', 'Total number of GPUs', 'gpu')
 
     # Copyright (C) 2018-present Lenovo. All rights reserved.
-    # Licensed under both the BSD-3 license for individual use and
+    # Licensed under both the BSD-3 license for individual/non-commercial use and
     # EPL-1.0 license for commercial use. Full text of both licenses can be found in
     # COPYING.BSD and COPYING.EPL files.
     # Functionality added to correct gpu_use_num metric
@@ -278,7 +278,7 @@ def metric_init(params):
         build_descriptor('gpu%s_decoder_util' % i, gpu_device_handler, default_time_max, 'uint', '%', 'both', '%u', 'GPU%s Type' % i, 'gpu')
 
         # Copyright (C) 2018-present Lenovo. All rights reserved.
-        # Licensed under both the BSD-3 license for individual use and
+        # Licensed under both the BSD-3 license for individual/non-commercial use and
         # EPL-1.0 license for commercial use. Full text of both licenses can be found in
         # COPYING.BSD and COPYING.EPL files.
         # Functionality added to get gpu monitor metric

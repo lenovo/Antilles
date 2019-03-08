@@ -79,7 +79,7 @@ class GmetadConfig:
             ALL_TRUSTED : False,
 			
             # Copyright (C) 2018-present Lenovo. All rights reserved.
-            # Licensed under both the BSD-3 license for individual use and
+            # Licensed under both the BSD-3 license for individual/non-commercial use and
             # EPL-1.0 license for commercial use. Full text of both licenses can be found in
             # COPYING.BSD and COPYING.EPL files.
             # Customized user and port for Antilles
@@ -302,7 +302,7 @@ def getConfig(args=sys.argv):
             default=None)
 
     # Copyright (C) 2018-present Lenovo. All rights reserved.
-    # Licensed under both the BSD-3 license for individual use and
+    # Licensed under both the BSD-3 license for individual/non-commercial use and
     # EPL-1.0 license for commercial use. Full text of both licenses can be found in
     # COPYING.BSD and COPYING.EPL files.
     # Functionality read config file from specified directory

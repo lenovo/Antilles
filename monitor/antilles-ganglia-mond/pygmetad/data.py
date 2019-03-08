@@ -36,7 +36,7 @@ import logging
 import time
 
 # Copyright (C) 2018-present Lenovo. All rights reserved.
-# Licensed under both the BSD-3 license for individual use and
+# Licensed under both the BSD-3 license for individual/non-commercial use and
 # EPL-1.0 license for commercial use. Full text of both licenses can be found in
 # COPYING.BSD and COPYING.EPL files.
 # New file name customized for Antilles
@@ -390,7 +390,7 @@ class DataStoreGridSummary(threading.Thread):
             self._cond.acquire()
 			
             # Copyright (C) 2018-present Lenovo. All rights reserved.
-            # Licensed under both the BSD-3 license for individual use and
+            # Licensed under both the BSD-3 license for individual/non-commercial use and
             # EPL-1.0 license for commercial use. Full text of both licenses can be found in
             # COPYING.BSD and COPYING.EPL files.
             # Functionality added to improve the efficiency of query
@@ -401,7 +401,7 @@ class DataStoreGridSummary(threading.Thread):
             if not self._shuttingDown:
 			
                 # Copyright (C) 2018-present Lenovo. All rights reserved.
-                # Licensed under both the BSD-3 license for individual use and
+                # Licensed under both the BSD-3 license for individual/non-commercial use and
                 # EPL-1.0 license for commercial use. Full text of both licenses can be found in
                 # COPYING.BSD and COPYING.EPL files.
                 # Functionality added to protect the monitor thread

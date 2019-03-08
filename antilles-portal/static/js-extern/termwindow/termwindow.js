@@ -28,7 +28,7 @@
  * Copyright © 2019-present Lenovo
  *
  * All changes implemented by Lenovo are licensed under both the BSD-3 license
- * for individual use and EPL-1.0 license for commercial use. Full text of both
+ * for individual/non-commercial use and EPL-1.0 license for commercial use. Full text of both
  * licenses can be found in COPYING.BSD and COPYING.EPL files.
  */
 

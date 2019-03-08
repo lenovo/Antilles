@@ -32,7 +32,7 @@
 #******************************************************************************/
 
 # Copyright (C) 2018-present Lenovo. All rights reserved.
-# Licensed under both the BSD-3 license for individual use and
+# Licensed under both the BSD-3 license for individual/non-commercial use and
 # EPL-1.0 license for commercial use. Full text of both licenses can be found in
 # COPYING.BSD and COPYING.EPL files.
 # The current file origin named pygmetad.py
@@ -45,7 +45,7 @@ import logging
 import logging.handlers
 
 # Copyright (C) 2018-present Lenovo. All rights reserved.
-# Licensed under both the BSD-3 license for individual use and
+# Licensed under both the BSD-3 license for individual/non-commercial use and
 # EPL-1.0 license for commercial use. Full text of both licenses can be found in
 # COPYING.BSD and COPYING.EPL files.
 # New file name customized for Antilles
@@ -168,7 +168,7 @@ def getLoggingLevel(lspec):
         return logging.DEBUG
 
 # Copyright (C) 2018-present Lenovo. All rights reserved.
-# Licensed under both the BSD-3 license for individual use and
+# Licensed under both the BSD-3 license for individual/non-commercial use and
 # EPL-1.0 license for commercial use. Full text of both licenses can be found in
 # COPYING.BSD and COPYING.EPL files.
 # Functionality customized to generate executable script by setuptools

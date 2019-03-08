@@ -36,7 +36,7 @@ import logging
 from pkg_resources import iter_entry_points
 
 # Copyright (C) 2018-present Lenovo. All rights reserved.
-# Licensed under both the BSD-3 license for individual use and
+# Licensed under both the BSD-3 license for individual/non-commercial use and
 # EPL-1.0 license for commercial use. Full text of both licenses can be found in
 # COPYING.BSD and COPYING.EPL files.
 # New file name customized for Antilles
@@ -48,7 +48,7 @@ _plugins = []  # Holds a list of all of the plugins
 
 
 # Copyright (C) 2018-present Lenovo. All rights reserved.
-# Licensed under both the BSD-3 license for individual use and
+# Licensed under both the BSD-3 license for individual/non-commercial use and
 # EPL-1.0 license for commercial use. Full text of both licenses can be found in
 # COPYING.BSD and COPYING.EPL files.
 # Functionality modified func load_plugins() to load plugin from entry_point
@@ -87,7 +87,7 @@ def notify_plugins(clusterNode):
     for plugin in _plugins:
 	
         # Copyright (C) 2018-present Lenovo. All rights reserved.
-        # Licensed under both the BSD-3 license for individual use and
+        # Licensed under both the BSD-3 license for individual/non-commercial use and
         # EPL-1.0 license for commercial use. Full text of both licenses can be found in
         # COPYING.BSD and COPYING.EPL files.
         # Functionality added to protect the monitor thread

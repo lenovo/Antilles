@@ -39,7 +39,7 @@ import logging
 import zlib
 
 # Copyright (C) 2018-present Lenovo. All rights reserved.
-# Licensed under both the BSD-3 license for individual use and
+# Licensed under both the BSD-3 license for individual/non-commercial use and
 # EPL-1.0 license for commercial use. Full text of both licenses can be found in
 # COPYING.BSD and COPYING.EPL files.
 # New file name customized for Antilles
@@ -117,7 +117,7 @@ class GmondReader(threading.Thread):
             sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             try:
                 # Copyright (C) 2018-present Lenovo. All rights reserved.
-                # Licensed under both the BSD-3 license for individual use and
+                # Licensed under both the BSD-3 license for individual/non-commercial use and
                 # EPL-1.0 license for commercial use. Full text of both licenses can be found in
                 # COPYING.BSD and COPYING.EPL files.
                 # Functionality added to avoid socket connection block

@@ -1658,7 +1658,7 @@ Terminal.prototype.write = function(data) {
             this.x = 0;
 
             // Copyright (C) 2018-present Lenovo. All rights reserved.
-            // Licensed under both the BSD-3 license for individual use and
+            // Licensed under both the BSD-3 license for individual/non-commercial use and
             // EPL-1.0 license for commercial use. Full text of both licenses can be found in
             // COPYING.BSD and COPYING.EPL files.
             // This could have been done as a case fall through, but coverity things that
@@ -2626,7 +2626,7 @@ Terminal.prototype.keyDown = function(ev) {
       break;
 
     // Copyright (C) 2018-present Lenovo. All rights reserved.
-    // Licensed under both the BSD-3 license for individual use and
+    // Licensed under both the BSD-3 license for individual/non-commercial use and
     // EPL-1.0 license for commercial use. Full text of both licenses can be found in
     // COPYING.BSD and COPYING.EPL files.
     // Keep code consistent with the latest version
@@ -2698,7 +2698,7 @@ Terminal.prototype.keyDown = function(ev) {
     case 36:
 
       // Copyright (C) 2018-present Lenovo. All rights reserved.
-      // Licensed under both the BSD-3 license for individual use and
+      // Licensed under both the BSD-3 license for individual/non-commercial use and
       // EPL-1.0 license for commercial use. Full text of both licenses can be found in
       // COPYING.BSD and COPYING.EPL files.
       // Comment meaningless code
@@ -2713,7 +2713,7 @@ Terminal.prototype.keyDown = function(ev) {
     case 35:
 
       // Copyright (C) 2018-present Lenovo. All rights reserved.
-      // Licensed under both the BSD-3 license for individual use and
+      // Licensed under both the BSD-3 license for individual/non-commercial use and
       // EPL-1.0 license for commercial use. Full text of both licenses can be found in
       // COPYING.BSD and COPYING.EPL files.
       // Comment meaningless code

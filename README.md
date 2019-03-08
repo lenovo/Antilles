@@ -24,4 +24,4 @@ Antilles User guide reference to `docs/Antilles_user_guide.md`
 
 ## License
 
-BSD-3 license for individual use and EPL-1.0 license for commercial use.
+BSD-3 license for individual/non-commercial use and EPL-1.0 license for commercial use.

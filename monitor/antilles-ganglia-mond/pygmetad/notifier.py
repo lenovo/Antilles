@@ -37,7 +37,7 @@ import zlib
 import logging
 
 # Copyright (C) 2018-present Lenovo. All rights reserved.
-# Licensed under both the BSD-3 license for individual use and
+# Licensed under both the BSD-3 license for individual/non-commercial use and
 # EPL-1.0 license for commercial use. Full text of both licenses can be found in
 # COPYING.BSD and COPYING.EPL files.
 # New file name customized for Antilles
@@ -55,7 +55,7 @@ class GmetadNotifier(threading.Thread):
         threading.Thread.__init__(self)
 
         # Copyright (C) 2018-present Lenovo. All rights reserved.
-        # Licensed under both the BSD-3 license for individual use and
+        # Licensed under both the BSD-3 license for individual/non-commercial use and
         # EPL-1.0 license for commercial use. Full text of both licenses can be found in
         # COPYING.BSD and COPYING.EPL files.
         # Functionality modified to load plugin from entry_point rather than specified directory
