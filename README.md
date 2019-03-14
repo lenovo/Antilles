@@ -20,7 +20,7 @@ With Antilles, users can centralize resource allocation in one supercomputing cl
 
 Antilles Admin guide reference to [docs/Antilles_admin_guide.md](./docs/Antilles_admin_guide.md)
 
-Antilles User guide reference to [docs/Antilles_user_guide.md](./docs/Antilles_admin_guide.md)
+Antilles User guide reference to [docs/Antilles_user_guide.md](./docs/Antilles_user_guide.md)
 
 ## Contributors
 
