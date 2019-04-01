@@ -49,6 +49,7 @@ Recommends:       python-six >= 1.10
 Recommends:       python-celery >= 4.1
 Recommends:       python-requests >= 2.18
 Recommends:       python-pika >= 0.11
+Recommends:       python-pika < 1.0
 Recommends:       python-pandas >= 0.19
 Recommends:       python-xlwt >= 1.2
 Recommends:       python-jsonschema >= 2.6
@@ -176,7 +177,7 @@ find %{buildroot}%{install_path} -regex .*\.py ! -regex .*/migrations/.*\.py -de
 %python_requires "six>=1.10"
 %python_requires "celery>=4.1"
 %python_requires "requests>=2.18"
-%python_requires "pika>=0.11"
+%python_requires "pika~=0.11"
 %python_requires "pandas>=0.19"
 %python_requires "xlwt>=1.2"
 %python_requires "jsonschema>=2.6"
