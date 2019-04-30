@@ -280,49 +280,45 @@ class FilesConnector(object):
 
     def is_readable(self, path):
         uid = self.user.uid
-        gid = self.user.group.gr_gid
+        gid = self.user.gid
         s = os.stat(path)
         mode = s[stat.ST_MODE]
-        # return (
-        #     ((s[stat.ST_UID] == uid) and (mode & stat.S_IRUSR > 0)) or
-        #     ((s[stat.ST_GID] == gid) and (mode & stat.S_IRGRP > 0)) or
-        #     (mode & stat.S_IROTH > 0)
-        # )
+
         if stat.S_ISDIR(mode):
-            return (
-                ((s[stat.ST_UID] == uid) and (mode & stat.S_IXUSR > 0) and (mode & stat.S_IRUSR > 0)) or
-                ((s[stat.ST_GID] == gid) and (mode & stat.S_IXGRP > 0) and (mode & stat.S_IRGRP > 0)) or
-                (mode & stat.S_IXOTH > 0) and (mode & stat.S_IROTH > 0)
-            )
+            if s[stat.ST_UID] == uid:
+                return (mode & stat.S_IXUSR > 0) and (mode & stat.S_IRUSR > 0)
+            elif s[stat.ST_GID] == gid:
+                return (mode & stat.S_IXGRP > 0) and (mode & stat.S_IRGRP > 0)
+            else:
+                return (mode & stat.S_IXOTH > 0) and (mode & stat.S_IROTH > 0)
         else:
-            return (
-                ((s[stat.ST_UID] == uid) and (mode & stat.S_IRUSR > 0)) or
-                ((s[stat.ST_GID] == gid) and (mode & stat.S_IRGRP > 0)) or
-                (mode & stat.S_IROTH > 0)
-            )
+            if s[stat.ST_UID] == uid:
+                return mode & stat.S_IRUSR > 0
+            elif s[stat.ST_GID] == gid:
+                return mode & stat.S_IRUSR > 0
+            else:
+                return mode & stat.S_IROTH > 0
 
     def is_writable(self, path):
         uid = self.user.uid
-        gid = self.user.group.gr_gid
+        gid = self.user.gid
         s = os.stat(path)
         mode = s[stat.ST_MODE]
-        # return (
-        #         ((s[stat.ST_UID] == uid) and (mode & stat.S_IWUSR > 0)) or
-        #         ((s[stat.ST_GID] == gid) and (mode & stat.S_IWGRP > 0)) or
-        #         (mode & stat.S_IWOTH > 0)
-        # )
+
         if stat.S_ISDIR(mode):
-            return (
-                ((s[stat.ST_UID] == uid) and (mode & stat.S_IXUSR > 0) and (mode & stat.S_IWUSR > 0)) or
-                ((s[stat.ST_GID] == gid) and (mode & stat.S_IXGRP > 0) and (mode & stat.S_IWGRP > 0)) or
-                (mode & stat.S_IXOTH > 0) and (mode & stat.S_IWOTH > 0)
-            )
+            if s[stat.ST_UID] == uid:
+                return (mode & stat.S_IXUSR > 0) and (mode & stat.S_IWUSR > 0)
+            elif s[stat.ST_GID] == gid:
+                return (mode & stat.S_IXGRP > 0) and (mode & stat.S_IWGRP > 0)
+            else:
+                return (mode & stat.S_IXOTH > 0) and (mode & stat.S_IWOTH > 0)
         else:
-            return (
-                ((s[stat.ST_UID] == uid) and (mode & stat.S_IWUSR > 0)) or
-                ((s[stat.ST_GID] == gid) and (mode & stat.S_IWGRP > 0)) or
-                (mode & stat.S_IWOTH > 0)
-            )
+            if s[stat.ST_UID] == uid:
+                return mode & stat.S_IWUSR > 0
+            elif s[stat.ST_GID] == gid:
+                return mode & stat.S_IWUSR > 0
+            else:
+                return mode & stat.S_IWOTH > 0
     
     def __isAccepted(self, target):
         if target == '.' or target == '..':
@@ -443,7 +439,7 @@ class FilesConnector(object):
         cwd = {
             'mime': 'directory',
             'ts': int(ts),
-            'read': 1,
+            'read': self.__isAllowed(path, 'read'),
             'write': self.__isAllowed(path, 'write'),
             'size': 0,
             'hash': self.__hash(path),
@@ -1292,17 +1288,18 @@ class FilesConnector(object):
         """Search directories/files by query string"""
         for d in os.listdir(path):
             pd = os.path.join(path, d)
-            if re.search(r'' + query, d):
+            if query in pd:
                 result.append(self.__info(pd, rootPath))
             
-            if os.path.isdir(pd):
+            if os.path.isdir(pd) and self.is_readable(pd):
                 self.__search(query, pd, rootPath, result)
     
     def search(self, args):
         root = self.user.workspace
         query = args['q']
         result = []
-        self.__search(query, root, root, result)
+        if self.is_readable(root):
+            self.__search(query, root, root, result)
         
         return {'files': result}
     
