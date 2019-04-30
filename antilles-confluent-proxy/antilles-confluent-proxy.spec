@@ -27,6 +27,7 @@ Requires:       python2-setuptools >= 36.0
 Recommends:     python-PasteDeploy
 Recommends:     python-gunicorn >= 19.7.1
 Recommends:     python-falcon >= 1.3
+Recommends:     python-falcon < 2.0
 Recommends:     python-gevent >= 1.1.2
 Recommends:     python-ujson
 Recommends:     python-jsonschema >= 2.5.1
@@ -61,7 +62,7 @@ rm -rf %{name}.egg-info
 %pre
 %python_requires "PasteDeploy"
 %python_requires "gunicorn>=19.7.1"
-%python_requires "falcon>=1.3"
+%python_requires "falcon~=1.3"
 %python_requires "gevent>=1.1.2"
 %python_requires "ujson"
 %python_requires "jsonschema>=2.5.1"

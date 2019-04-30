@@ -1,4 +1,4 @@
 paramiko>=2.3.1
 setuptools>=36.0
-falcon>=1.3
+falcon~=1.3
 jsonschema>=2.5.1

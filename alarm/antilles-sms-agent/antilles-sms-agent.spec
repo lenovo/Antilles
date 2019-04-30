@@ -36,6 +36,7 @@ Recommends:     python-PyYAML >= 3.10
 Recommends:     python-setuptools >= 36.0
 Recommends:     python-gunicorn >= 19.7.1
 Recommends:     python-falcon >= 1.3
+Recommends:     python-falcon < 2.0
 Recommends:     python-ujson
 Recommends:     python-jsonschema >= 2.5.1
 Recommends:     python-futures
@@ -81,7 +82,7 @@ rm -rf %{name}.egg-info
 %python_requires "PasteDeploy"
 %python_requires "PyYAML>=3.10"
 %python_requires "gunicorn>=19.7.1"
-%python_requires "falcon>=1.3"
+%python_requires "falcon~=1.3"
 %python_requires "ujson"
 %python_requires "jsonschema>=2.5.1"
 %python_requires "futures"
