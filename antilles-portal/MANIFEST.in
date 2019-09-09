@@ -1,10 +1,10 @@
-graft build
 graft config
 graft etc
 graft src
 graft static
 
-include .babelrc .bumpversion.cfg .npmrc
+include .browserslistrc .bumpversion.cfg .npmrc
+include babel.config.js postcss.config.js vue.config.js
 include package.json index.html README.md
 include COPYING.BSD COPYING.EPL
 include antilles-portal.spec

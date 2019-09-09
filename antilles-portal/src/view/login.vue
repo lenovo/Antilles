@@ -1,4 +1,4 @@
-<style lang="">
+<style>
 	.login{
 		position:relative;
     background: #333c4b;
