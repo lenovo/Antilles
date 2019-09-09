@@ -1,4 +1,4 @@
-# lico-portal
+# antilles-portal
 
 ## Project setup
 ```
