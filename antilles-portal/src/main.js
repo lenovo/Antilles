@@ -6,7 +6,7 @@
  * COPYING.BSD and COPYING.EPL files.
  */
 
-import "babel-polyfill"
+import 'babel-polyfill'
 // Import Vue.js
 import Vue from 'vue'
 // Import Vue.js core libraries

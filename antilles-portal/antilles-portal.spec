@@ -19,7 +19,7 @@ Source0:        %{name}-%{version}.tar.gz
 
 BuildArch:      noarch
 
-BuildRequires:  nodejs >= 6
+BuildRequires:  nodejs >= 10
 BuildRequires:  antilles-rpm-macros
 %{?suse_version:BuildRequires:npm >= 6}
 
