@@ -944,7 +944,7 @@ Part 1:
 Part 2:
 
 | belonging_service_node | belonging_rack | belonging_chassis | location_u | groups |
-| ---------------------- | -------------- | ----------------- | ---------- | ----- | ------ | ------ |
+| ---------------------- | -------------- | ----------------- | ---------- | ------ |
 |                        | rack1          |                   | 2          | login  |
 
 The fields are described as follows:
