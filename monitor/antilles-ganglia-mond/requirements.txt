@@ -1,3 +1,2 @@
 influxdb>=5.0.0
 setuptools>=36.0
-antilles-tools

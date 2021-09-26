@@ -3,4 +3,3 @@ psycopg2>=2.6
 supervisor>=3.3.4
 django-pastedeploy-settings>=1.0
 futures>=3.1; python_version < "3"
-antilles-tools
