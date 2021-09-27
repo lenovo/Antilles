@@ -5,7 +5,7 @@
 # COPYING.BSD and COPYING.EPL files.
 
 Name:           antilles-ganglia-mond
-Version:        1.0.0
+Version:        1.0.1
 Release:        1%{?dist}
 Summary:        Ganglia Meta daemon in Python
 
@@ -109,5 +109,8 @@ rm -rf %{name}.egg-info
 %{python2_sitelib}/%{name}-%{version}.pth
 
 %changelog
+* Mon Sep 27 2021 Xin He <hexin5@lenovo.com> - 1.0.1-1
+- Bumpversion to 1.0.1.
+
 * Tue Jul 17 2018 Yunfei Shi <shiyf2@lenovo.com> - 1.0.0-1
 - Initial package.

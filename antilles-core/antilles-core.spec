@@ -10,7 +10,7 @@
 %global install_path %_antillesdir/core
 
 Name:           antilles-core
-Version:        1.0.0
+Version:        1.0.1
 Release:        1%{?dist}
 Summary:        Restful server for antilles project
 
@@ -250,5 +250,8 @@ find %{buildroot}%{install_path} -regex .*\.py ! -regex .*/migrations/.*\.py -de
 %caps(cap_chown,cap_dac_override,cap_setgid,cap_setuid,cap_fowner=ep) %{_sbindir}/antilles-gunicorn
 
 %changelog
+* Mon Sep 27 2021 Xin He <hexin5@lenovo.com> - 1.0.1-1
+- Bumpversion to 1.0.1.
+
 * Tue Sep 25 2018 Yunfei Shi <shiyf2@lenovo.com> - 1.0.0-1
 - Initial package.
