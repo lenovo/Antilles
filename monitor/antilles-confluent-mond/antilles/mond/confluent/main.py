@@ -34,7 +34,7 @@ from .hostlist import expand_hostlist
 
 
 def main():
-    arguments = docopt(__doc__, version='Antilles Confluent Mond 1.0.0')
+    arguments = docopt(__doc__, version='Antilles Confluent Mond 1.0.1')
 
     config = ConfigParser()
     config.read(resource_filename(__name__, 'data/default.ini'))
