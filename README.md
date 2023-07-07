@@ -1,5 +1,7 @@
 # <img src="img/antilles.png"> Antilles
 
+IMPORTANT NOTE: Antilles has been renamed to OpenLiCO. This repository is now for archiving the history in the release branches. The master branch is not in a consistent state. Submit all current issues and pull requests to https://github.com/lenovo/openlico. Any issue submitted here will be automatically closed.
+
 Antilles is an infrastructure management software for high-performance computing (HPC). It provides features like cluster management and monitoring, job scheduling and management, cluster user management, account management, and file system management.
 
 With Antilles, administrators can manage and monitor user groups, users, and billing groups within a cluster in a centralized manner. They can also schedule and monitor jobs, alerts, and reports, and perform various settings.
