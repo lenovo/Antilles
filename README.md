@@ -1,4 +1,6 @@
-# <img src="img/antilles.png"> Antilles
+**Note**: Antilles is deprecated, please move to [OpenLiCO](https://github.com/lenovo/openlico)
+
+# <img src="img/antilles.png"> Antilles (deprecated)
 
 IMPORTANT NOTE: Antilles has been renamed to OpenLiCO. This repository is now for archiving the history in the release branches. The master branch is not in a consistent state. Submit all current issues and pull requests to https://github.com/lenovo/openlico. Any issue submitted here will be automatically closed.
 
